@@ -1,0 +1,22 @@
+/* ==========================================================================
+   FONTS / SETTINGS
+   ========================================================================== */
+/// Font family
+:root {
+    --font-primary: 'Caviar Dreams', sans-serif;
+    --font-secondary: 'Open Sans', sans-serif;
+
+    /// Grosseur des textes
+    --font-size-h1: #{typo(28px, 90px)};
+    --font-size-h2: #{typo(20px, 40px)};
+    --font-size-p: #{typo(18px, 24px)};
+    --font-size-p-small: #{typo(16px, 22px)};
+
+    --font-size-copyright: #{typo(14px, 20px)};
+    --font-size-categories: #{typo(14px, 20px)};
+}
+
+@font-face {
+    font-family: 'Caviar Dreams';
+    src: url(../../assets/fonts/CaviarDreams.ttf);
+}

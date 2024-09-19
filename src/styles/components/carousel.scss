@@ -1,0 +1,29 @@
+.swiper {
+    margin: 87px 0;
+}
+
+.swiper-slide {
+    img {
+        width: 100vw;
+        height: 80vh;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .titre {
+        display: flex;
+        align-items: center;
+
+        margin: 25px 0 0 214px;
+    }
+
+    h2 {
+        padding: 0 25px;
+    }
+
+    .ligne {
+        width: 176px;
+        height: 1px;
+        background-color: var(--color-black);
+    }
+}
