@@ -3,20 +3,15 @@
    ========================================================================== */
 /// Font family
 :root {
-    --font-primary: 'Caviar Dreams', sans-serif;
-    --font-secondary: 'Open Sans', sans-serif;
+    --font-primary: 'Rufina', sans-serif;
+    --font-secondary: 'Source Sans Pro', sans-serif;
 
     /// Grosseur des textes
-    --font-size-h1: #{typo(28px, 90px)};
-    --font-size-h2: #{typo(20px, 40px)};
-    --font-size-p: #{typo(18px, 24px)};
-    --font-size-p-small: #{typo(16px, 22px)};
-
-    --font-size-copyright: #{typo(14px, 20px)};
-    --font-size-categories: #{typo(14px, 20px)};
-}
-
-@font-face {
-    font-family: 'Caviar Dreams';
-    src: url(../../assets/fonts/CaviarDreams.ttf);
+    --font-size-h1-bkg: #{typo(150px, 533px)};
+    --font-size-h1: #{typo(50px, 133px)};
+    --font-size-h2: #{typo(30px, 48px)};
+    --font-size-p: #{typo(20px, 35px)};
+    --font-size-p-small: #{typo(15px, 25px)};
+    --font-size-lien: #{typo(32px, 32px)};
+    --font-size-btn: #{typo(18px, 30px)};
 }
