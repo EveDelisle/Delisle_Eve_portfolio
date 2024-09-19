@@ -7,10 +7,18 @@ a {
     color: inherit;
     text-decoration: none;
     font-family: var(--font-secondary);
-    font-size: var(--font-size-p);
+    font-size: var(--font-size-lien);
     font-weight: 300;
+    color: var(--color-black);
 
     &:hover {
         color: var(--color-primary);
     }
+}
+
+.btn {
+    font-family: var(--font-secondary);
+    font-size: var(--font-size-btn);
+    font-weight: 400;
+    color: var(--color-black);
 }

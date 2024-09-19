@@ -1,0 +1,13 @@
+.p-small {
+    font-size: var(--font-size-p-small);
+    font-family: var(--font-secondary);
+    font-weight: 300;
+    color: var(--color-black);
+}
+
+p {
+    font-family: var(--font-secondary);
+    font-size: var(--font-size-p);
+    font-weight: 400;
+    color: var(--color-black);
+}
