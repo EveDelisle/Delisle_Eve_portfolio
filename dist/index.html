@@ -12,6 +12,9 @@
         // À décommenter lorsque rendu dans le fichier .php pour que les icônes fonctionnent dans WP
         // iconsPath = '<?php bloginfo('template_url') ?>/dist/';
     </script>
+
+    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module">
+    </script>
     <script src="scripts/main.js" defer></script>
 </head>
 
@@ -58,7 +61,9 @@
     </header>
 
     <div class="hero">
-        <div class="wrapper"></div>
+        <div class="wrapper">
+            <div id="lottie-container" style="width: 2058px; height: 250px; margin-top: 200px" data-component="Lottie"></div>
+        </div>
     </div>
 
 

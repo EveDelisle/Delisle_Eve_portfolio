@@ -1,5 +1,6 @@
 import Carousel from './components/Carousel';
 import Header from './components/Header';
+import Lottie from './components/Lottie';
 
 export default class ComponentFactory {
   constructor() {
@@ -7,6 +8,7 @@ export default class ComponentFactory {
     this.componentList = {
       Carousel,
       Header,
+      Lottie,
     };
     this.init();
   }
