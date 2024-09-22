@@ -30,15 +30,15 @@ h1 {
 h2 {
     font-size: var(--font-size-h2);
     font-weight: 400;
-    font-family: var(--font-secondary);
+    font-family: var(--font-primary);
     color: var(--color-black);
 }
 
 h3 {
+    font-size: var(--font-size-h3);
+    font-weight: 400;
     font-family: var(--font-secondary);
-    font-size: var(--font-size-p);
-    font-weight: 600;
-    color: var(--color-white);
+    color: var(--color-black);
 }
 
 em {

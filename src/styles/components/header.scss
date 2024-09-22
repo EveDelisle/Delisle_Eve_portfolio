@@ -9,12 +9,42 @@
         }
     }
     .logo {
+        font-family: var(--font-primary);
     }
     .wrapper {
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 24px 0;
+    }
+
+    .reseaux_sociaux a {
+        &:hover {
+            .behance {
+                transform: scale(1.2);
+                border-radius: 100%;
+
+                background-color: var(--color-primary);
+            }
+
+            .linkedin {
+                transform: scale(1.2);
+                border-radius: 4px;
+                background-color: var(--color-primary);
+            }
+            .instagram {
+                transform: scale(1.2);
+                border-radius: 8px;
+
+                background-color: var(--color-primary);
+            }
+        }
+    }
+
+    .behance,
+    .linkedin,
+    .instagram {
+        transition: transform 0.3s ease, color 0.3s ease;
     }
 
     nav {
