@@ -12,24 +12,11 @@ export default class Lottie {
 
   loadLottieAnimation() {
     const animation = lottie.loadAnimation({
-      container: this.element,
+      container: document.getElementById('lottie-container1'),
       renderer: 'svg',
       loop: false,
       autoplay: true,
       path: 'https://lottie.host/33c44ba9-4683-4417-a350-a74241bc061e/xQ6UlyDoot.json',
-    });
-
-    // Handle scroll event to control animation based on scroll position
-    window.addEventListener('scroll', () => {
-      const scrollTop =
-        window.pageYOffset || document.documentElement.scrollTop;
-      const maxScroll =
-        document.documentElement.scrollHeight - window.innerHeight;
-      const scrollFraction = scrollTop / maxScroll;
-
-      const maxFrames = animation.totalFrames;
-      const frame = Math.round(scrollFraction * maxFrames);
-      animation.goToAndStop(frame, true);
     });
 
     let isReversed = false; // Declare a mutable variable to track animation direction
