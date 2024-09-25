@@ -1,13 +1,7 @@
 .header {
-    .ligne {
-        width: 269px;
-        height: 1px;
-        background-color: var(--color-black);
+    position: relative;
+    border-bottom: 1px solid var(--color-primary);
 
-        @media screen and (max-width: 1165px) {
-            display: none;
-        }
-    }
     .logo {
         font-family: var(--font-primary);
     }
@@ -15,7 +9,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 24px 0;
+        padding: 40px 0 49px 0;
     }
 
     .reseaux_sociaux a {
@@ -55,6 +49,10 @@
         ul {
             display: flex;
             gap: 77px;
+
+            position: relative;
+            padding-right: 40px;
+            margin: 0;
         }
 
         li {
@@ -83,6 +81,26 @@
             z-index: 1;
             padding: 0px 15px;
             overflow: hidden;
+        }
+
+        ul::after {
+            content: '';
+            position: absolute;
+            width: 1px;
+            height: 145px;
+            top: -44px;
+            left: -125px;
+            background-color: var(--color-primary);
+        }
+
+        ul::before {
+            content: '';
+            position: absolute;
+            width: 1px;
+            height: 145px;
+            top: -44px;
+            right: -133px;
+            background-color: var(--color-primary);
         }
 
         a::after {
