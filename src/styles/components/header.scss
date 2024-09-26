@@ -71,8 +71,6 @@
 
             &:hover {
                 transform-origin: center;
-
-                color: var(--color-white);
             }
         }
 
@@ -83,6 +81,7 @@
             overflow: hidden;
         }
 
+        /*-----BORDERS AUTOUR DU HEADER-----------------------*/
         ul::after {
             content: '';
             position: absolute;
@@ -102,6 +101,7 @@
             right: -133px;
             background-color: var(--color-primary);
         }
+        /*---------------------------------------------------*/
 
         a::after {
             content: '';

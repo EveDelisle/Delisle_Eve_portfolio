@@ -12,6 +12,7 @@ h6 {
     line-height: 1.1;
     font-weight: bold;
     margin: 0;
+    color: var(--color-secondaire-typo);
 }
 
 .h1-bkg {
@@ -24,21 +25,21 @@ h1 {
     font-family: var(--font-primary);
     font-weight: 400;
     line-height: 1;
-    color: var(--color-black);
+    // color: var(--color-black);
 }
 
 h2 {
     font-size: var(--font-size-h2);
     font-weight: 400;
     font-family: var(--font-primary);
-    color: var(--color-black);
+    color: var(--color-secondaire-typo);
 }
 
 h3 {
     font-size: var(--font-size-h3);
     font-weight: 400;
     font-family: var(--font-secondary);
-    color: var(--color-black);
+    color: var(--color-secondaire-typo);
 }
 
 em {
