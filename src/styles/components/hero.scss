@@ -1,49 +1,105 @@
 .hero {
-    position: relative;
     height: 80vh;
 
     .wrapper {
         width: 100%;
         height: 100%;
-        //display: flex;
+        // display: flex;
+        // justify-content: center;
     }
     .hero_media {
-        width: 100%;
-        height: 100%;
-    }
-
-    .border_img {
+        position: relative;
+        top: 29px;
+        right: -50%;
         width: 741px;
         height: 874px;
-        border-top-left-radius: 217px;
-        border-top-right-radius: 217px;
-    }
-
-    img {
-        position: absolute;
-        right: 20%;
-        top: 10%;
-        object-fit: cover;
-        overflow: hidden;
-
-        z-index: 0;
-
-        width: 741px;
-        height: 874px;
-
-        border-top-left-radius: 217px;
-        border-top-right-radius: 217px;
-
-        padding: 20px 20px 0 20px;
-
-        border-top: 1px solid black;
-        border-left: 1px solid black;
-        border-right: 1px solid black;
 
         @media screen and (max-width: 1920px) {
             width: 441px;
             height: 574px;
-            right: 25%;
+            top: 29px;
+            right: -50%;
         }
+
+        .border_img {
+            position: absolute;
+            z-index: 2;
+            top: -13px;
+            right: 184px;
+            width: 74px;
+            background-color: var(--color-white);
+            display: flex;
+            justify-content: center;
+
+            @media screen and (max-width: 1920px) {
+                top: -13px;
+                right: 184px;
+            }
+        }
+
+        .etoile_gauche {
+            position: absolute;
+            z-index: 2;
+            bottom: 319px;
+            left: -12px;
+            width: 25px;
+            height: 88px;
+            background-color: var(--color-white);
+            display: flex;
+
+            align-items: center;
+
+            @media screen and (max-width: 1920px) {
+                bottom: 319px;
+                left: -11px;
+            }
+        }
+
+        .etoile_droite {
+            position: absolute;
+            z-index: 2;
+            bottom: 319px;
+            right: -12px;
+            width: 25px;
+            height: 88px;
+            background-color: var(--color-white);
+            display: flex;
+
+            align-items: center;
+
+            @media screen and (max-width: 1920px) {
+                bottom: 319px;
+                right: -12px;
+            }
+        }
+
+        img {
+            object-fit: cover;
+            overflow: hidden;
+
+            z-index: 0;
+
+            width: 741px;
+            height: 874px;
+
+            border-top-left-radius: 217px;
+            border-top-right-radius: 217px;
+
+            padding: 20px 20px 0 20px;
+
+            border-top: 1px solid black;
+            border-left: 1px solid black;
+            border-right: 1px solid black;
+
+            @media screen and (max-width: 1920px) {
+                width: 441px;
+                height: 574px;
+            }
+        }
+    }
+
+    .hero_content {
+        position: relative;
+        z-index: 3;
     }
 }
