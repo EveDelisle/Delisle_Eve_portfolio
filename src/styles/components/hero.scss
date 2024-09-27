@@ -1,24 +1,29 @@
 .hero {
-    height: 80vh;
-
+    height: 100vh;
+    color: var(--color-bkg);
     .wrapper {
         width: 100%;
         height: 100%;
         // display: flex;
         // justify-content: center;
     }
-    .hero_media {
+
+    .media {
+        width: 100%;
+        height: 100%;
+    }
+
+    .photo_de_moi {
         position: relative;
         top: 29px;
         right: -50%;
-        width: 741px;
-        height: 874px;
 
         @media screen and (max-width: 1920px) {
-            width: 441px;
-            height: 574px;
             top: 29px;
             right: -50%;
+
+            width: 441px;
+            height: 574px;
         }
 
         .border_img {
@@ -74,16 +79,14 @@
         }
 
         img {
-            object-fit: cover;
+            object-fit: fit;
             overflow: hidden;
-
-            z-index: 0;
 
             width: 741px;
             height: 874px;
 
-            border-top-left-radius: 217px;
-            border-top-right-radius: 217px;
+            border-top-left-radius: 345px;
+            border-top-right-radius: 345px;
 
             padding: 20px 20px 0 20px;
 
@@ -94,12 +97,87 @@
             @media screen and (max-width: 1920px) {
                 width: 441px;
                 height: 574px;
+
+                border-top-left-radius: 217px;
+                border-top-right-radius: 217px;
             }
         }
     }
 
-    .hero_content {
-        position: relative;
-        z-index: 3;
+    .titre_gauche {
+        position: absolute;
+        margin-top: 67px;
+
+        @media screen and (max-width: 1920px) {
+            margin-top: 67px;
+        }
+    }
+
+    .titre_droite {
+        width: 100%;
+        position: absolute;
+
+        display: flex;
+        flex-direction: column;
+
+        align-items: flex-end;
+
+        position: absolute;
+        z-index: 5;
+
+        bottom: -91px;
+        right: 88px;
+
+        @media screen and (max-width: 1920px) {
+            bottom: 45px;
+            right: 88px;
+        }
+
+        .profil {
+            text-align: left;
+            width: 671px;
+        }
+
+        .ligne {
+            position: absolute;
+            z-index: -1;
+            left: 0;
+            width: 1100px;
+            height: 1px;
+            background-color: var(--color-primary);
+        }
+
+        .ligne_profil {
+            display: flex;
+            align-items: center;
+        }
+
+        .petit_cercle {
+            position: absolute;
+            z-index: 5;
+            left: 30%;
+            background-color: var(--color-white);
+            height: 27px;
+            width: 74px;
+
+            display: flex;
+            justify-content: center;
+
+            .cercle {
+                border-radius: 100%;
+                background-color: var(--color-primary);
+                height: 26px;
+                width: 26px;
+            }
+        }
+
+        .gros_cercle {
+            position: absolute;
+            right: 40%;
+            border-radius: 100%;
+            height: 106px;
+            width: 106px;
+            border: 1px solid var(--color-primary);
+        }
     }
 }
