@@ -121,6 +121,8 @@
 
         bottom: 45px;
 
+        color: var(--color-secondaire-typo);
+
         @media screen and (max-width: 1920px) {
             bottom: 187px;
         }
@@ -164,6 +166,7 @@
         }
         .salutation {
             background-color: var(--color-white);
+            color: var(--color-secondaire-typo);
         }
 
         .ligne_cercles {

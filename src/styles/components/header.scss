@@ -1,9 +1,8 @@
 .header {
     position: relative;
     border-bottom: 1px solid var(--color-primary);
-
     .logo {
-        font-family: var(--font-primary);
+        color: var(--color-secondaire-typo);
     }
     .wrapper {
         display: flex;
@@ -56,11 +55,6 @@
         }
 
         li {
-            list-style: none;
-
-            font-family: var(--font-secondary);
-            font-size: var(--font-size-lien);
-            font-weight: 300;
             color: var(--color-black);
 
             border: 1px solid black;

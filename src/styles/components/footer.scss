@@ -1,0 +1,41 @@
+.footer {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: 71px 0;
+
+    .logo {
+        color: var(--color-white);
+        font-family: var(--font-primary);
+    }
+
+    nav {
+        margin-top: 119px;
+        margin-bottom: 68px;
+    }
+    ul {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .cv {
+        border: 1px solid var(--color-white);
+        padding: 17px 43px;
+    }
+
+    .divider {
+        width: 1755px;
+        height: 1px;
+        background-color: var(--color-white);
+    }
+
+    .logo_reseaux {
+        margin-top: 57px;
+        display: grid;
+        justify-content: center;
+        gap: 51px;
+    }
+
+    .reseaux_sociaux {
+        text-align: center;
+    }
+}
