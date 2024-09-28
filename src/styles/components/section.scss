@@ -1,0 +1,149 @@
+.a_propos {
+    position: relative;
+    background-color: var(--color-primary);
+    padding: 102px 0 133px 0;
+
+    color: var(--color-white);
+
+    p {
+        color: var(--color-white);
+    }
+
+    .description_lien_video {
+        width: 1599px;
+
+        display: grid;
+
+        p {
+            width: 1082px;
+        }
+        .titre_cercle {
+            display: flex;
+            gap: 150px;
+            height: 165px;
+            align-items: flex-end;
+
+            .cercle {
+                display: flex;
+                justify-content: flex-start;
+                align-items: flex-start;
+                height: 100%;
+            }
+
+            .forme_cercle {
+                border-radius: 100%;
+                border: 1px solid var(--color-white);
+                width: 70px;
+                height: 70px;
+                background-color: var(--color-quaternaire);
+            }
+        }
+    }
+
+    .lottie_video {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .video {
+        display: flex;
+
+        a {
+            display: flex;
+            align-items: flex-end;
+            border-bottom: 1px solid var(--color-white);
+        }
+    }
+
+    .groupes_etoiles {
+        position: relative;
+
+        .etoile_grosse {
+            .etoile {
+                stroke-width: 0.2px;
+            }
+        }
+
+        .etoile_petite {
+            position: absolute;
+            top: 23px;
+            left: 4px;
+        }
+
+        .etoile_moyenne {
+            position: absolute;
+            bottom: -11px;
+            left: 100px;
+        }
+    }
+
+    .gros_cercle {
+        position: absolute;
+        top: 30%;
+        left: -8%;
+        width: 408px;
+        height: 408px;
+        border-radius: 100%;
+        border: 1px solid var(--color-white);
+        background-color: var(--color-quaternaire);
+    }
+
+    .aspects {
+        padding: 0 128px;
+        display: grid;
+        gap: 160px;
+        margin-top: 187px;
+    }
+
+    .competences_qualites {
+        display: flex;
+        gap: 90px;
+
+        p {
+            margin: 0;
+        }
+    }
+
+    .cercle_dessous_aspects {
+        .cercle {
+            position: absolute;
+            bottom: 25%;
+            left: 20%;
+
+            width: 64px;
+            height: 64px;
+
+            border-radius: 100%;
+            border: 1px solid var(--color-white);
+            background-color: var(--color-quaternaire);
+        }
+    }
+
+    .langages_loisirs {
+        display: flex;
+        gap: 90px;
+        justify-content: flex-end;
+
+        p {
+            margin: 0;
+        }
+    }
+
+    .souligne_titre {
+        display: flex;
+        align-items: center;
+        margin-top: 35px;
+
+        gap: 11px;
+        .ligne {
+            width: 176px;
+            height: 1px;
+            background-color: var(--color-white);
+        }
+
+        .etoile {
+            display: flex;
+            align-items: center;
+        }
+    }
+}
