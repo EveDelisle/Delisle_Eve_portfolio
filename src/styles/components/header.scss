@@ -14,6 +14,7 @@
     .reseaux_sociaux a {
         &:hover {
             .behance {
+                fill: var(--color-white);
                 transform: scale(1.2);
                 border-radius: 100%;
 
@@ -21,11 +22,13 @@
             }
 
             .linkedin {
+                fill: var(--color-white);
                 transform: scale(1.2);
                 border-radius: 4px;
                 background-color: var(--color-primary);
             }
             .instagram {
+                fill: var(--color-white);
                 transform: scale(1.2);
                 border-radius: 8px;
 

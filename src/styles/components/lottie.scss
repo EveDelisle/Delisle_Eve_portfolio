@@ -1,5 +1,8 @@
-.lottie_hero svg {
-    width: 2560px;
-    height: 250px;
-    display: none;
+.lottie_hero {
+    width: 2100px;
+    height: 300px;
+    position: absolute;
+    z-index: -12;
+    top: 25%;
+    left: -5%;
 }
