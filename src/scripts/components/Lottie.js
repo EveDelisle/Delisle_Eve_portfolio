@@ -1,3 +1,5 @@
+import LottieWeb from 'lottie-web';
+
 import { LottieInteractivity } from '@lottiefiles/lottie-interactivity';
 
 export default class Lottie {
@@ -13,9 +15,19 @@ export default class Lottie {
   }
 
   loadLottieAnimation() {
-    document.addEventListener('DOMContentLoaded', () => {
+    if ('scroll' in this.element.dataset) {
+      const animationPath = this.element.getAttribute('src');
+
+      const animation = LottieWeb.loadAnimation({
+        container: this.element, // The DOM element
+        renderer: 'svg', // Rendering method
+        loop: true, // Loop the animation
+        autoplay: true, // Start playing automatically
+        path: animationPath, // Path to the Lottie JSON file
+      });
+
       LottieInteractivity.create({
-        player: myLottieAnimation,
+        player: animation,
         mode: 'scroll',
         actions: [
           {
@@ -25,7 +37,7 @@ export default class Lottie {
           },
         ],
       });
-    });
+    }
   }
 
   AnimationReverse() {
