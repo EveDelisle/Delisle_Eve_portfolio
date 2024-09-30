@@ -6,3 +6,20 @@
     top: 25%;
     left: -5%;
 }
+
+.lottie_propos_coin_droit {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 5;
+
+    height: 505px;
+    width: 300px;
+
+    transform: scaleX(-1); /* Flips the element horizontally */
+
+    svg {
+        width: 0;
+        height: 0;
+    }
+}
