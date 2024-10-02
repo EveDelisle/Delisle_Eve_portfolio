@@ -19,10 +19,18 @@
 .animation {
     svg {
         max-height: 100%;
+    }
+}
 
-        path {
-            height: 505px;
-            width: 300px;
+.lottie_livre {
+    position: absolute;
+    top: 15%;
+    right: -35%;
+    z-index: 1;
+
+    .animation {
+        svg {
+            max-height: 100%;
         }
     }
 }

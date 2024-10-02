@@ -15,7 +15,7 @@ export default class Lottie {
   }
 
   loadLottieAnimation() {
-    if ('scroll' in this.element.dataset) {
+    /* if ('scroll' in this.element.dataset) {
       document
         .querySelector('#monLottieInteractif')
         .addEventListener('load', () => {
@@ -36,7 +36,35 @@ export default class Lottie {
             ],
           });
         });
-    }
+    }*/
+
+    document.addEventListener('DOMContentLoaded', function () {
+      // Select all Lottie animations with the 'data-scroll' attribute
+      const lottieElements = document.querySelectorAll('[data-scroll]');
+
+      lottieElements.forEach((lottieElement) => {
+        const playerId = `#${lottieElement.id}`;
+
+        console.log(`Lottie ${playerId} loaded`);
+
+        // Example offset values
+        const startOffset = 0.3; // Start when 40% of the element is visible
+        const endOffset = 0.9; // End when 90% of the element is visible
+
+        // Initialize Lottie scroll behavior
+        create({
+          player: playerId, // Apply the animation to the specific element
+          mode: 'scroll',
+          actions: [
+            {
+              visibility: [startOffset, endOffset],
+              type: 'seek',
+              frames: [0, 180], // Adjust frames per lottie if needed
+            },
+          ],
+        });
+      });
+    });
   }
 
   AnimationReverse() {
@@ -56,60 +84,4 @@ export default class Lottie {
       });
     }
   }
-  /*import LottieWeb from 'lottie-web';
-import { create } from '@lottiefiles/lottie-interactivity';
-
-export default class Lottie {
-  constructor(element) {
-    this.element = element;
-    this.init();
-  }
-
-  init() {
-    this.loadLottie();
-  }
-
-  loadLottie() {
-    const animation = LottieWeb.loadAnimation({
-      container: this.element,
-      name: `${this.element.dataset.name}`,
-      renderer: 'svg',
-      loop: true,
-      autoplay: true,
-      path: `assets/lotties/${this.element.dataset.name}.json`,
-    });
-
-    if ('scroll' in this.element.dataset) {
-      create({
-        player: animation,
-        mode: 'scroll',
-        actions: [
-          {
-            visibility: [0, 1.0],
-            type: 'seek',
-            frames: [
-              parseInt(this.element.dataset.start),
-              parseInt(this.element.dataset.end),
-            ],
-          },
-        ],
-      });
-    } else if ('hover' in this.element.dataset) {
-      create({
-        player: animation,
-        mode: 'cursor',
-        actions: [
-          {
-            type: 'hover',
-            forceFlag: false,
-            state: 'loop',
-            frames: [
-              parseInt(this.element.dataset.start),
-              parseInt(this.element.dataset.end),
-            ],
-          },
-        ],
-      });
-    }
-  }*/
 }
