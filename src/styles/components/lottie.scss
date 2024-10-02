@@ -34,3 +34,29 @@
         }
     }
 }
+
+.lottie_apropos2 {
+    position: absolute;
+    bottom: -38%;
+    left: -32%;
+    z-index: 1;
+
+    .animation {
+        svg {
+            max-height: 100%;
+        }
+    }
+}
+
+.lottie_fleche_video {
+    position: absolute;
+    top: -17%;
+    left: -4%;
+    z-index: 1;
+
+    .animation {
+        svg {
+            max-height: 100%;
+        }
+    }
+}
