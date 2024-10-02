@@ -20,12 +20,16 @@ export default class Lottie {
         .querySelector('#monLottieInteractif')
         .addEventListener('load', () => {
           console.log('allo');
+
+          const startOffset = 0.4; // Start when 10% of the element is visible
+          const endOffset = 0.9; // End when 90% of the element is visible
+
           create({
             player: '#monLottieInteractif',
             mode: 'scroll',
             actions: [
               {
-                visibility: [0, 1],
+                visibility: [startOffset, endOffset],
                 type: 'seek',
                 frames: [0, 180],
               },

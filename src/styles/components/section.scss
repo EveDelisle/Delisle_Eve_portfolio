@@ -9,6 +9,11 @@
         color: var(--color-white);
     }
 
+    .wrapper {
+        position: relative;
+        z-index: 1;
+    }
+
     .description_lien_video {
         width: 1599px;
 
@@ -81,6 +86,8 @@
         position: absolute;
         top: 30%;
         left: -8%;
+        z-index: 1;
+
         width: 408px;
         height: 408px;
         border-radius: 100%;

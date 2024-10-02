@@ -11,14 +11,18 @@
     position: absolute;
     top: 0;
     right: 0;
-    z-index: 5;
-
-    height: 505px;
-    width: 300px;
+    z-index: 0;
+    margin-top: -768px;
+    margin-right: -627px;
 }
 
 .animation {
     svg {
         max-height: 100%;
+
+        path {
+            height: 505px;
+            width: 300px;
+        }
     }
 }
