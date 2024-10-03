@@ -1,6 +1,7 @@
 import Carousel from './components/Carousel';
 import Header from './components/Header';
 import Lottie from './components/Lottie';
+import Scrolly from './components/Scrolly';
 
 export default class ComponentFactory {
   constructor() {
@@ -9,6 +10,7 @@ export default class ComponentFactory {
       Carousel,
       Header,
       Lottie,
+      Scrolly,
     };
     this.init();
   }
