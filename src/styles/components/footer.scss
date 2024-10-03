@@ -90,4 +90,40 @@
     .reseaux_sociaux {
         text-align: center;
     }
+
+    .reseaux_sociaux a {
+        &:hover {
+            .behance {
+                fill: var(--color-white);
+                transform: scale(1.2);
+                border-radius: 100%;
+
+                background-color: var(--color-quaternaire);
+            }
+
+            .linkedin {
+                fill: var(--color-white);
+                transform: scale(1.2);
+                border-radius: 4px;
+                background-color: var(--color-quaternaire);
+            }
+            .instagram {
+                fill: var(--color-white);
+                transform: scale(1.2);
+                border-radius: 8px;
+
+                background-color: var(--color-quaternaire);
+            }
+        }
+
+        @media screen and (max-width: 1165px) {
+            display: none;
+        }
+    }
+
+    .behance,
+    .linkedin,
+    .instagram {
+        transition: transform 0.3s ease, color 0.3s ease;
+    }
 }
