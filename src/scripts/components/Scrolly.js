@@ -62,35 +62,29 @@ export default class Scrolly {
     for (let i = 0; i < this.items.length; i++) {
       const item = this.items[i];
       const scrollSpeed =
-        parseFloat(item.getAttribute('data-scrolly-speed')) || 1; // Get scroll speed from attribute or default to 1
+        parseFloat(item.getAttribute('data-scrolly-speed')) || 1;
       const startPosition =
-        parseFloat(item.getAttribute('data-start-position')) || 0; // Get starting position from attribute or default to 0
-      const direction = item.getAttribute('data-direction') || 'horizontal'; // Get movement direction from attribute
+        parseFloat(item.getAttribute('data-start-position')) || 0;
+      const direction = item.getAttribute('data-direction') || 'horizontal';
 
       // Get max and min positions
       const maxPosition =
-        parseFloat(item.getAttribute('data-max-position')) || Infinity; // Default to Infinity if not specified
+        parseFloat(item.getAttribute('data-max-position')) || Infinity;
       const minPosition =
-        parseFloat(item.getAttribute('data-min-position')) || -Infinity; // Default to -Infinity if not specified
+        parseFloat(item.getAttribute('data-min-position')) || -Infinity;
 
       let newPosition;
 
       if (direction === 'horizontal') {
-        // Calculate new position for horizontal movement
         newPosition = scrollY * scrollSpeed + startPosition;
         item.style.transform = `translateX(${newPosition}px)`;
       } else if (direction === 'vertical') {
-        // Calculate new position for vertical movement (opposite direction)
-        newPosition = startPosition - scrollY * scrollSpeed; // Subtract scroll position
+        newPosition = startPosition - scrollY * scrollSpeed;
         item.style.transform = `translateY(${newPosition}px)`;
       }
 
       // Apply limits
-      if (newPosition > maxPosition) {
-        newPosition = maxPosition; // Limit to max position
-      } else if (newPosition < minPosition) {
-        newPosition = minPosition; // Limit to min position
-      }
+      newPosition = Math.min(Math.max(newPosition, minPosition), maxPosition);
 
       // Update the item's transform with the limited position
       if (direction === 'horizontal') {
@@ -99,5 +93,10 @@ export default class Scrolly {
         item.style.transform = `translateY(${newPosition}px)`;
       }
     }
+
+    // Apply CSS for smooth transition
+    this.items.forEach((item) => {
+      item.style.transition = 'transform 0.2s ease-out'; // Adjust duration and easing as needed
+    });
   }
 }
