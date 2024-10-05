@@ -1,3 +1,19 @@
+/*-------------NOM BKG-----------------------------*/
+
+.nom_bkg {
+    position: relative;
+    height: 300px;
+
+    .h1-bkg {
+        color: transparent; /* No fill color */
+        -webkit-text-stroke: 2px #000000; /* White stroke of 2px width */
+        text-wrap: nowrap;
+
+        position: absolute;
+        top: -40%;
+    }
+}
+
 /*---------------SECTION A PROPOS---------------------------*/
 
 .a_propos {
@@ -124,6 +140,8 @@
         .etoile_grosse {
             .etoile {
                 stroke-width: 0.2px;
+
+                animation: float 6s ease-in-out infinite;
             }
         }
 
@@ -161,7 +179,7 @@
         position: absolute;
         top: 30%;
         left: -8%;
-        z-index: 1;
+        z-index: -1;
 
         width: 408px;
         height: 408px;
@@ -187,11 +205,11 @@
     }
 
     .cercle_dessous_aspects {
-        .cercle {
-            position: absolute;
-            bottom: 25%;
-            left: 20%;
+        position: absolute;
+        bottom: 25%;
+        left: 20%;
 
+        .cercle {
             width: 64px;
             height: 64px;
 

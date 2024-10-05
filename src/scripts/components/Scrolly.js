@@ -10,41 +10,6 @@ export default class Scrolly {
 
     this.init();
   }
-  /* init() {
-    const observer = new IntersectionObserver(
-      this.watch.bind(this),
-      this.options
-    ); //callbakc est watch
-
-    const items = this.element.querySelectorAll('[data-scrolly]');
-    for (let i = 0; i < items.length; i++) {
-      const item = items[i];
-      observer.observe(item);
-
-      console.log('allo');
-    } //observer tous les éléments dans la data-scrolly   var target pour const items
-    //changer target pour item
-  }
-
-  /*watch(entries, observer) {
-    //observer ne fait que référence a intersectionObserver et non la variable
-    //console.log(entries);
-    for (let i = 0; i < entries.length; i++) {
-      const entry = entries[i];
-      const target = entry.target; //chacun des elements html qui repond oui ou non
-      console.log(target);
-
-      if (entry.isIntersecting) {
-        //console.log('oui');
-        target.classList.add('is-active');
-        observer.unobserve(target); //pour enlever les animatons quand retourne vers le haut
-      } else {
-        //console.log('non');
-
-        target.classList.remove('is-active');
-      }
-    }
-  }*/
 
   init() {
     this.items = this.element.querySelectorAll('[data-scrolly]');
@@ -62,12 +27,14 @@ export default class Scrolly {
     for (let i = 0; i < this.items.length; i++) {
       const item = this.items[i];
       const scrollSpeed =
-        parseFloat(item.getAttribute('data-scrolly-speed')) || 1;
+        parseFloat(item.getAttribute('data-scrolly-speed')) || 1; // Speed of the scroll effect
       const startPosition =
-        parseFloat(item.getAttribute('data-start-position')) || 0;
-      const direction = item.getAttribute('data-direction') || 'horizontal';
+        parseFloat(item.getAttribute('data-start-position')) || 0; // Starting position of the element
+      const direction = item.getAttribute('data-direction') || 'horizontal'; // 'horizontal' or 'vertical'
+      const directionX =
+        item.getAttribute('data-direction-x') || 'left-to-right'; // Horizontal movement direction (left-to-right or right-to-left)
 
-      // Get max and min positions
+      // Get max and min positions (optional)
       const maxPosition =
         parseFloat(item.getAttribute('data-max-position')) || Infinity;
       const minPosition =
@@ -75,26 +42,26 @@ export default class Scrolly {
 
       let newPosition;
 
+      // Horizontal movement
       if (direction === 'horizontal') {
-        newPosition = scrollY * scrollSpeed + startPosition;
+        if (directionX === 'left-to-right') {
+          newPosition = scrollY * scrollSpeed + startPosition; // Move left to right
+        } else if (directionX === 'right-to-left') {
+          newPosition = startPosition - scrollY * scrollSpeed; // Move right to left
+        }
+        newPosition = Math.min(Math.max(newPosition, minPosition), maxPosition); // Apply limits
         item.style.transform = `translateX(${newPosition}px)`;
-      } else if (direction === 'vertical') {
-        newPosition = startPosition - scrollY * scrollSpeed;
-        item.style.transform = `translateY(${newPosition}px)`;
       }
 
-      // Apply limits
-      newPosition = Math.min(Math.max(newPosition, minPosition), maxPosition);
-
-      // Update the item's transform with the limited position
-      if (direction === 'horizontal') {
-        item.style.transform = `translateX(${newPosition}px)`;
-      } else if (direction === 'vertical') {
+      // Vertical movement (opposite to scroll direction)
+      if (direction === 'vertical') {
+        newPosition = startPosition - scrollY * scrollSpeed;
+        newPosition = Math.min(Math.max(newPosition, minPosition), maxPosition); // Apply limits
         item.style.transform = `translateY(${newPosition}px)`;
       }
     }
 
-    // Apply CSS for smooth transition
+    // Apply smooth transition to all elements
     this.items.forEach((item) => {
       item.style.transition = 'transform 0.2s ease-out'; // Adjust duration and easing as needed
     });
