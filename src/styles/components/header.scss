@@ -3,7 +3,44 @@
     border-bottom: 1px solid var(--color-primary);
     .logo {
         color: var(--color-secondaire-typo);
+        a {
+            position: relative;
+        }
+        a::after {
+            content: '';
+            position: absolute;
+            width: 2px;
+            height: 2px; /* Border thickness */
+            background: var(--color-tertiaire); /* Border color */
+            bottom: 20%;
+            left: 0;
+            transform: translateY(100%) scaleY(0);
+            transition: transform 0.4s ease; /* Animation timing */
+        }
+
+        a:hover::after {
+            transform: translateY(0) scaleY(10);
+        }
+
+        a::before {
+            content: '';
+            position: absolute;
+            z-index: -1;
+
+            width: 100%;
+            height: 50%;
+            background-color: var(--color-tertiaire);
+            bottom: 0px;
+            left: 0;
+            transform: translateX(-50%) scaleX(0);
+            transition: transform 0.4s ease 0.2s; /* Animation timing */
+        }
+
+        a:hover::before {
+            transform: translateX(0) scaleX(1);
+        }
     }
+
     .wrapper {
         display: flex;
         justify-content: space-between;

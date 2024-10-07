@@ -255,6 +255,7 @@
 
 .mes_projets {
     padding: 172px 0;
+    position: relative;
 
     .wrapper {
         margin-top: 172px;
@@ -281,5 +282,13 @@
     }
     h2 {
         color: var(--color-secondaire-typo);
+    }
+
+    .grosse_etoile_verte_gauche {
+        position: absolute;
+        bottom: 3%;
+        left: 15%;
+
+        animation: float 3s ease-in-out infinite;
     }
 }
