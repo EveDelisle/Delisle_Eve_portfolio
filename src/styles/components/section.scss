@@ -254,10 +254,32 @@
 /*SECTION PROJETS----------------------------------------------------*/
 
 .mes_projets {
-    // height: 1256px;
     padding: 172px 0;
 
-    h2 {
+    .wrapper {
         margin-top: 172px;
+        display: flex;
+        align-items: center;
+        gap: 42px;
+
+        .ligne_etoile {
+            display: flex;
+            align-items: center;
+            gap: 17px;
+
+            .ligne {
+                width: 761px;
+                height: 1px;
+                background-color: var(--color-primary);
+            }
+
+            .etoile {
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+    h2 {
+        color: var(--color-secondaire-typo);
     }
 }

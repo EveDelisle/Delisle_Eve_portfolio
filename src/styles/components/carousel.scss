@@ -1,5 +1,67 @@
 .swiper {
     height: 800px;
+
+    .lien {
+        display: flex;
+        position: relative;
+        padding: 10px;
+        width: 215px;
+    }
+
+    a {
+        color: var(--color-secondaire-typo);
+        border-bottom: 1px solid var(--color-secondaire-typo);
+    }
+
+    .lien::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-top: 1px solid transparent;
+        border-left: 1px solid transparent;
+
+        top: 0;
+        left: 0;
+        box-sizing: border-box;
+
+        transform: scale(0);
+        transform-origin: top left;
+
+        transition: transform 0.6s ease, border-color 0.6s ease; /* Animation timing */
+    }
+
+    .lien:hover:after {
+        transform: scale(1);
+
+        border-top-color: var(--color-primary);
+        border-left-color: var(--color-primary);
+    }
+
+    .lien::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-bottom: 1px solid transparent;
+        border-right: 1px solid transparent;
+
+        top: 0;
+        left: 0;
+        box-sizing: border-box;
+
+        transform: scale(0);
+        transform-origin: bottom right;
+
+        transition: transform 0.6s ease, border-color 0.6s ease; /* Animation timing */
+    }
+
+    .lien:hover:before {
+        transform: scale(1);
+
+        border-bottom-color: var(--color-primary);
+        border-right-color: var(--color-primary);
+    }
 }
 
 .swiper-slide {
@@ -9,7 +71,7 @@
 
 .swiper-content {
     display: flex;
-    width: 580px;
+    width: 600px;
 
     justify-content: center;
     align-items: center;
@@ -20,7 +82,7 @@
 .ligne_projet {
     width: 1px;
     height: 380px;
-    background-color: var(--color-black);
+    background-color: var(--color-secondaire-typo);
 }
 
 .type_projet {
@@ -32,10 +94,6 @@
         width: 1px;
         height: 20px;
         background-color: var(--color-black);
-    }
-
-    p {
-        //margin-top: 0;
     }
 }
 
@@ -58,12 +116,12 @@
 .numero_projet {
     .h1-bkg {
         color: transparent; /* No fill color */
-        -webkit-text-stroke: 2px #000000; /* White stroke of 2px width */
+        -webkit-text-stroke: 2px var(--color-primary); /* White stroke of 2px width */
         text-wrap: nowrap;
 
         position: absolute;
         z-index: -2;
         right: 5%;
-        top: -15%;
+        top: -13%;
     }
 }
