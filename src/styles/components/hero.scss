@@ -104,9 +104,11 @@
 
         img {
             position: relative;
+
+            object-fit: cover;
+            object-position: left;
             z-index: 5;
 
-            object-fit: fit;
             width: 441px;
             height: 574px;
             border-top-left-radius: 217px;
