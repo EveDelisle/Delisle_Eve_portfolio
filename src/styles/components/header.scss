@@ -46,6 +46,10 @@
         justify-content: space-between;
         align-items: center;
         padding: 40px 0 49px 0;
+
+        @media screen and (max-width: 500px) {
+            padding: 20px 0;
+        }
     }
 
     .reseaux_sociaux a {

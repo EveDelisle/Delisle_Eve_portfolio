@@ -87,6 +87,13 @@
         border-top-left-radius: 227px;
         border-top-right-radius: 227px;
 
+        @media screen and (max-width: 500px) {
+            width: 236px;
+            height: 290px;
+            right: -35%;
+            top: 115px;
+        }
+
         .img_eve {
             overflow: hidden;
             display: block;
@@ -97,6 +104,11 @@
             border-top-right-radius: 217px;
 
             margin-top: 17px;
+
+            @media screen and (max-width: 500px) {
+                width: 212px;
+                height: 275px;
+            }
         }
 
         img {
@@ -106,8 +118,8 @@
             object-position: left;
             z-index: 5;
 
-            width: 441px;
-            height: 574px;
+            width: 100%;
+            height: 100%;
             border-top-left-radius: 217px;
             border-top-right-radius: 217px;
         }
@@ -120,6 +132,19 @@
             background-color: var(--color-white);
             display: flex;
             justify-content: center;
+
+            @media screen and (max-width: 500px) {
+                width: 43px;
+                right: 94px;
+                top: -7px;
+            }
+
+            svg {
+                @media screen and (max-width: 500px) {
+                    width: 12px;
+                    height: 12px;
+                }
+            }
         }
 
         .etoile_gauche {
@@ -133,6 +158,19 @@
             display: flex;
 
             align-items: center;
+
+            @media screen and (max-width: 500px) {
+                height: 43px;
+                bottom: 143px;
+                left: -7px;
+            }
+
+            svg {
+                @media screen and (max-width: 500px) {
+                    width: 12px;
+                    height: 12px;
+                }
+            }
         }
 
         .etoile_droite {
@@ -146,6 +184,19 @@
             display: flex;
 
             align-items: center;
+
+            @media screen and (max-width: 500px) {
+                height: 43px;
+                right: -19px;
+                bottom: 143px;
+            }
+
+            svg {
+                @media screen and (max-width: 500px) {
+                    width: 12px;
+                    height: 12px;
+                }
+            }
         }
     }
 
@@ -203,8 +254,9 @@
         width: 667px;
         z-index: -10;
 
-        @media screen and (max-width: 1920px) {
-            margin-top: 67px;
+        @media screen and (max-width: 500px) {
+            margin-top: 47px;
+            margin-left: 15px;
         }
         .salutation {
             background-color: var(--color-white);
@@ -245,6 +297,10 @@
         z-index: -6;
 
         animation: float 3s ease-in-out infinite;
+
+        @media screen and (max-width: 500px) {
+            display: none;
+        }
     }
 
     .grosse_etoile_verte_droite {
@@ -252,8 +308,16 @@
         right: 13%;
         top: 20%;
         z-index: -11;
+        width: 271px;
+        height: 271px;
 
         animation: float 4s ease-in-out infinite;
+
+        @media screen and (max-width: 1848px) {
+            width: 200px;
+            height: 200px;
+            top: 35%;
+        }
     }
 
     @keyframes float {
