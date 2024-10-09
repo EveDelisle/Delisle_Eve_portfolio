@@ -42,8 +42,12 @@
     width: 7em;
 }
 
-.icon {
+.header .icon {
     width: 45px;
     height: 45px;
     fill: var(--color-icons);
+}
+
+.footer .icon {
+    fill: var(--color-white);
 }
