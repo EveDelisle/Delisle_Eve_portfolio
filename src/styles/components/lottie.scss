@@ -9,11 +9,14 @@
 
 .lottie_propos_coin_droit {
     position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 0;
-    margin-top: -768px;
-    margin-right: -627px;
+    bottom: 40%;
+    left: 40%;
+    z-index: -10;
+
+    /* transform: translate(
+        -50%,
+        50%
+    ); /* Centers the Lottie relative to its position */
 }
 
 .animation {
@@ -26,7 +29,7 @@
     position: absolute;
     top: 15%;
     right: -35%;
-    z-index: 1;
+    z-index: -10;
 
     .animation {
         svg {
@@ -39,7 +42,7 @@
     position: absolute;
     bottom: -38%;
     left: -32%;
-    z-index: 1;
+    z-index: -10;
 
     .animation {
         svg {
@@ -50,9 +53,10 @@
 
 .lottie_fleche_video {
     position: absolute;
-    top: -17%;
-    left: -4%;
-    z-index: 1;
+    top: -18%;
+
+    right: 10%;
+    z-index: -10;
 
     .animation {
         svg {
