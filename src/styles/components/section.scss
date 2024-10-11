@@ -29,7 +29,6 @@
 
     .wrapper {
         position: relative;
-        //z-index: 15;
     }
 
     .description_lien_video {
@@ -44,6 +43,7 @@
             display: flex;
             gap: 150px;
             height: 165px;
+
             align-items: flex-end;
 
             .cercle {
@@ -51,33 +51,37 @@
                 justify-content: flex-start;
                 align-items: flex-start;
                 height: 100%;
+
+                @media screen and (max-width: 500px) {
+                    display: none;
+                }
             }
 
             .forme_cercle {
                 border-radius: 100%;
                 border: 1px solid var(--color-white);
-                width: 70px;
-                height: 70px;
+                // width: 70px;
+                // height: 70px;
+
+                width: 3.65vw;
+                height: 3.65vw; //keep it a perfect circle
+                max-width: 80vw;
+                max-height: 80vh;
                 background-color: var(--color-quaternaire);
             }
         }
     }
 
-    .lottie_video {
+    .lien_video {
         display: flex;
         justify-content: flex-end;
+
+        width: 80vw;
     }
 
     .video {
         display: flex;
-        position: absolute;
-        z-index: 15;
-        top: 29%;
-
-        .lien_video {
-            display: flex;
-            align-items: flex-end;
-        }
+        align-items: flex-end;
         a {
             position: relative;
             padding: 20px;
@@ -177,12 +181,14 @@
 
     .gros_cercle {
         position: absolute;
-        top: 30%;
+        top: 33%;
         left: -8%;
         z-index: -1;
 
-        width: 408px;
-        height: 408px;
+        width: 20vw;
+        height: 20vw; //keep it a perfect circle
+        max-width: 80vw;
+        max-height: 80vh;
         border-radius: 100%;
         border: 1px solid var(--color-white);
         background-color: var(--color-quaternaire);
