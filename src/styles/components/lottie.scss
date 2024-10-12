@@ -5,6 +5,36 @@
     z-index: -12;
     top: 25%;
     left: -5%;
+
+    @media screen and (max-width: 1400px) {
+        top: 28%;
+        width: 1531px;
+    }
+
+    @media screen and (max-width: 1306px) {
+        top: 38%;
+        width: 1428px;
+    }
+
+    @media screen and (max-width: 1200px) {
+        width: 1312px;
+    }
+
+    @media screen and (max-width: 970px) {
+        width: 1060px;
+    }
+
+    @media screen and (max-width: 768px) {
+        width: 840px;
+    }
+    @media screen and (max-width: 500px) {
+        width: 546px;
+        top: 24%;
+    }
+
+    @media screen and (max-width: 375px) {
+        width: 410px;
+    }
 }
 
 .lottie_propos_coin_droit {
