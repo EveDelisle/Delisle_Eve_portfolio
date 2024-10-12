@@ -69,12 +69,23 @@
     .hero_media {
         width: 100%;
         height: 100%;
+        position: relative;
+    }
 
-        z-index: 0;
+    .emplacement_media {
+        position: absolute;
+        z-index: -1;
+        right: 25%;
+
+        @media screen and (max-width: 500px) {
+            top: 15%;
+            right: 4%;
+        }
     }
 
     .img_eve {
         position: relative;
+
         width: 100%;
         max-width: 441px;
         height: auto;
@@ -92,7 +103,7 @@
         transition: width 0.5s ease, max-width 0.5s ease;
 
         @media screen and (max-width: 500px) {
-            max-width: 220px;
+            max-width: 300px;
             margin-top: 10px;
         }
     }
@@ -118,21 +129,31 @@
         }
     }
 
-    .img_bottom {
+    .img_bottom_droit {
         position: absolute;
-        height: 100px;
-        bottom: -10%;
-        right: -5%;
-        max-width: 450px;
+        height: 24px;
+        bottom: 0%;
+        right: -1%;
+        max-width: 10px;
+        width: 100%;
+        background-color: var(--color-white);
+    }
+
+    .img_bottom_gauche {
+        position: absolute;
+        height: 24px;
+        bottom: 0%;
+        left: -1%;
+        max-width: 10px;
         width: 100%;
         background-color: var(--color-white);
     }
     .etoile_top {
         position: absolute;
         z-index: 2;
-        //  top: -13px;
-        //  right: 207px;
-        left: 0;
+        top: -13px;
+
+        left: 42%;
         width: 74px;
         background-color: var(--color-white);
         display: flex;
@@ -140,12 +161,14 @@
 
         @media screen and (max-width: 500px) {
             width: 43px;
-            right: 94px;
-            top: -7px;
         }
 
         svg {
             @media screen and (max-width: 500px) {
+                width: 20px;
+                height: 20px;
+            }
+            @media screen and (max-width: 375px) {
                 width: 12px;
                 height: 12px;
             }
@@ -156,7 +179,7 @@
         position: absolute;
         z-index: 2;
         bottom: 63%;
-        left: -15px;
+        left: -13px;
 
         width: 25px;
         height: 88px;
@@ -167,12 +190,15 @@
 
         @media screen and (max-width: 500px) {
             height: 43px;
-            bottom: 143px;
-            left: -7px;
         }
 
         svg {
             @media screen and (max-width: 500px) {
+                width: 20px;
+                height: 20px;
+            }
+
+            @media screen and (max-width: 375px) {
                 width: 12px;
                 height: 12px;
             }
@@ -182,8 +208,8 @@
     .etoile_droite {
         position: absolute;
         z-index: 2;
-        bottom: 343px;
-        right: -0px;
+        bottom: 63%;
+        right: -13px;
         width: 25px;
         height: 88px;
         background-color: var(--color-white);
@@ -193,12 +219,15 @@
 
         @media screen and (max-width: 500px) {
             height: 43px;
-            right: -19px;
-            bottom: 143px;
         }
 
         svg {
             @media screen and (max-width: 500px) {
+                width: 20px;
+                height: 20px;
+            }
+
+            @media screen and (max-width: 375px) {
                 width: 12px;
                 height: 12px;
             }
@@ -218,6 +247,7 @@
         position: absolute; //pour mettre le text en avant de l'image
         z-index: 15;
         right: 0;
+        bottom: 17%;
 
         @media screen and (max-width: 900px) {
             padding-left: 200px;
@@ -229,11 +259,8 @@
 
         @media screen and (max-width: 500px) {
             padding-left: 400px;
+            bottom: 27%;
         }
-
-        /*.profil {
-                    width: 269px;
-                }*/
     }
 
     .container_ligne_profil {
