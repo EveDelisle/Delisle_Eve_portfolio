@@ -7,7 +7,8 @@
     .wrapper {
         width: 100%;
         height: 100%;
-        position: relative;
+
+        // padding: 0 15px;
     }
 
     .deux_etoiles {
@@ -66,135 +67,80 @@
         }
     }
 
+    .hero_content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        position: relative;
+
+        @media screen and (max-width: 712px) {
+            grid-template-columns: 1fr;
+        }
+    }
+
     .hero_media {
         width: 100%;
-        height: 100%;
-        position: relative;
-    }
-
-    .emplacement_media {
-        position: absolute;
-        z-index: -1;
-        right: 25%;
-
-        @media screen and (max-width: 1552px) {
-            top: 7%;
-        }
-
-        @media screen and (max-width: 1400px) {
-            top: 10%;
-        }
-
-        @media screen and (max-width: 1306px) {
-            top: 15%;
-        }
-
-        @media screen and (max-width: 500px) {
-            top: 15%;
-            right: 4%;
-        }
-
-        @media screen and (max-width: 768px) {
-            top: 15%;
-            right: 22%;
-        }
-
-        @media screen and (max-width: 500px) {
-            top: 15%;
-            right: 4%;
-        }
-    }
-
-    .img_eve {
-        position: relative;
-
-        width: 100%;
-        max-width: 441px;
+        max-width: 500px;
         height: auto;
+        position: relative;
+        right: 0;
+        top: 5%;
+        transition: transform 0.3s ease;
+        margin-right: 15px;
 
-        border-top: 1px solid black;
-        border-left: 1px solid black;
-        border-right: 1px solid black;
-
-        border-top-left-radius: 217px;
-        border-top-right-radius: 217px;
-
-        margin-top: 17px;
-
-        /* Add a smooth transition for width and height */
-        transition: width 0.5s ease, max-width 0.5s ease;
-
-        @media screen and (max-width: 1552px) {
-            max-width: 400px;
-        }
-
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 712px) {
             max-width: 350px;
-            margin-top: 10px;
+            display: flex;
+            margin-left: auto;
+            width: 100%;
+            transition: transform 0.3s ease;
         }
 
         @media screen and (max-width: 500px) {
             max-width: 300px;
-            margin-top: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        @media screen and (max-width: 375px) {
+            // max-width: 236px;
+
+            // width: 100%;
         }
     }
 
     img {
         width: 100%;
         height: auto;
+        display: block;
+        max-width: 100%;
 
         object-fit: cover;
         object-position: left;
-        z-index: 5;
 
-        border-top-left-radius: 217px;
-        border-top-right-radius: 217px;
+        border-top-left-radius: 235px;
+        border-top-right-radius: 235px;
+        border: 1px solid;
+        border-bottom: 0;
+        border-color: var(--color-primary);
 
-        padding: 15px;
-
-        /* Transition for width and height */
-        transition: width 0.5s ease, height 0.5s ease;
-
-        @media screen and (max-width: 500px) {
-            padding: 10px;
-        }
+        padding: 15px 15px 0 15px;
+        transition: transform 0.3s ease;
     }
 
-    .img_bottom_droit {
-        position: absolute;
-        height: 24px;
-        bottom: 0%;
-        right: -1%;
-        max-width: 10px;
-        width: 100%;
-        background-color: var(--color-white);
-    }
-
-    .img_bottom_gauche {
-        position: absolute;
-        height: 24px;
-        bottom: 0%;
-        left: -1%;
-        max-width: 10px;
-        width: 100%;
-        background-color: var(--color-white);
-    }
     .etoile_top {
         position: absolute;
         z-index: 2;
         top: -13px;
 
-        left: 42%;
-        width: 74px;
-        background-color: var(--color-white);
-        display: flex;
-        justify-content: center;
+        left: 43%;
 
         @media screen and (max-width: 500px) {
             width: 43px;
         }
 
         svg {
+            background-color: white;
+            width: 74px;
             @media screen and (max-width: 500px) {
                 width: 20px;
                 height: 20px;
@@ -208,13 +154,6 @@
         bottom: 63%;
         left: -13px;
 
-        width: 25px;
-        height: 88px;
-        background-color: var(--color-white);
-        display: flex;
-
-        align-items: center;
-
         @media screen and (max-width: 500px) {
             height: 43px;
             width: 18px;
@@ -222,6 +161,10 @@
         }
 
         svg {
+            background-color: white;
+            width: 25px;
+            height: 88px;
+
             @media screen and (max-width: 500px) {
                 width: 20px;
                 height: 20px;
@@ -234,12 +177,6 @@
         z-index: 2;
         bottom: 63%;
         right: -13px;
-        width: 25px;
-        height: 88px;
-        background-color: var(--color-white);
-        display: flex;
-
-        align-items: center;
 
         @media screen and (max-width: 500px) {
             height: 43px;
@@ -248,6 +185,9 @@
         }
 
         svg {
+            background-color: white;
+            width: 25px;
+            height: 88px;
             @media screen and (max-width: 500px) {
                 width: 20px;
                 height: 20px;
@@ -256,125 +196,39 @@
     }
 }
 
-.media_content {
-    width: 100%;
-    height: 600px;
+.texte_droit {
+    color: var(--color-secondaire-typo);
 
-    .titre_droite {
-        width: 672px;
+    position: absolute; //pour mettre le text en avant de l'image
+    z-index: 1;
+    right: 0;
+    bottom: -20%;
 
-        color: var(--color-secondaire-typo);
-
-        position: absolute; //pour mettre le text en avant de l'image
-        z-index: 15;
-        right: 0;
-        bottom: 17%;
-
-        @media screen and (max-width: 1306px) {
-            bottom: 9%;
-        }
-
-        @media screen and (max-width: 1250px) {
-            padding-left: 50px;
-        }
-
-        @media screen and (max-width: 1150px) {
-            padding-left: 100px;
-        }
-
-        @media screen and (max-width: 970px) {
-            padding-left: 150px;
-            bottom: 13%;
-        }
-
-        @media screen and (max-width: 900px) {
-            padding-left: 200px;
-            bottom: 17%;
-        }
-
-        @media screen and (max-width: 768px) {
-            padding-left: 250px;
-            bottom: 22%;
-        }
-
-        @media screen and (max-width: 700px) {
-            padding-left: 250px;
-        }
-
-        @media screen and (max-width: 500px) {
-            padding-left: 400px;
-            bottom: 27%;
-        }
-
-        @media screen and (max-width: 375px) {
-            padding-left: 400px;
-            bottom: 22%;
-        }
+    @media screen and (max-width: 830px) {
+        bottom: -25%;
     }
 
-    .container_ligne_profil {
-        width: 100%;
-        .container_ligne_cercle {
-            display: flex;
-            justify-content: center;
-            width: 100%;
+    @media screen and (max-width: 712px) {
+        bottom: -20%;
+    }
 
-            .gros_cercle {
-            }
-        }
-
-        .profil {
-            h3 {
-                flex: 1;
-                white-space: normal; //allows text to wrap naturally
-
-                @media screen and (max-width: 905px) {
-                    width: 70%;
-                }
-            }
+    h3 {
+        @media screen and (max-width: 830px) {
+            display: inline-flex;
+            flex-wrap: wrap;
+            max-width: 250px;
         }
     }
 }
 
-.titre_gauche {
-    position: absolute;
+.texte_gauche {
     margin-top: 67px;
-    width: 667px;
-    z-index: -10;
+    display: inline-flex;
+    height: 100%;
+    color: var(--color-secondaire-typo);
 
-    @media screen and (max-width: 500px) {
-        margin-top: 47px;
-        margin-left: 15px;
-    }
-    .salutation {
-        background-color: var(--color-white);
-        color: var(--color-secondaire-typo);
-    }
-
-    .ligne_cercles {
-        position: absolute;
-        z-index: -10;
-        display: flex;
-        align-items: center;
-    }
-
-    .ligne_hero {
-        position: absolute;
-        z-index: -1;
-        left: 105%;
-        width: 1200px;
-    }
-
-    .gros_cercle {
-        position: absolute;
-        z-index: -5;
-        right: -12%;
-    }
-
-    .petit_cercle {
-        position: absolute;
-        z-index: 5;
-        right: -110%;
+    @media screen and (max-width: 712px) {
+        height: 50%;
     }
 }
 
