@@ -195,46 +195,33 @@
     }
 
     .aspects {
-        padding: 0 128px;
+        padding: 0 7vw;
         display: grid;
-        gap: 160px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, auto);
+        // gap: 160px;
+        gap: 40px;
         margin-top: 187px;
-    }
 
-    .competences_qualites {
-        display: flex;
-        gap: 90px;
-
-        p {
-            margin: 0;
+        @media screen and (max-width: 768px) {
+            grid-template-columns: 1fr;
         }
     }
 
-    .cercle_dessous_aspects {
-        position: absolute;
-        bottom: 25%;
-        left: 20%;
-
-        .cercle {
-            width: 64px;
-            height: 64px;
-
-            border-radius: 100%;
-            border: 1px solid var(--color-white);
-            background-color: var(--color-quaternaire);
-
-            animation: float 6s ease-in-out infinite;
-        }
-    }
-
-    .langages_loisirs {
-        display: flex;
-        gap: 90px;
+    .langages,
+    .loisirs {
+        display: inline-grid;
         justify-content: flex-end;
+        margin-top: 50px;
 
-        p {
-            margin: 0;
+        @media screen and (max-width: 1152px) {
+            justify-content: flex-start;
         }
+    }
+
+    .loisirs {
+        margin-top: 50px;
+        margin-right: 125px;
     }
 
     .souligne_titre {
@@ -243,6 +230,11 @@
         margin-top: 35px;
 
         gap: 11px;
+
+        @media screen and (max-width: 1152px) {
+            margin-top: 20px;
+            gap: 43;
+        }
         .ligne {
             width: 176px;
             height: 1px;
