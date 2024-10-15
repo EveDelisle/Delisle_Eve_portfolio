@@ -52,10 +52,23 @@ export default class Header {
 
   initNavMobile() {
     const toggle = this.element.querySelector('.js-toggle');
+
+    /*const links = this.element.querySelectorAll('.js-nav-link');
+
+    for (let i = 0; i < links.length; i++) {
+      const link = links[i];
+
+      links.addEventListener('click', this.closeNav.bind(this));
+    }*/
+
     toggle.addEventListener('click', this.onToggleNav.bind(this));
   }
 
   onToggleNav() {
     this.html.classList.toggle('nav-is-active');
+  }
+
+  closeNav() {
+    this.html.classList.remove('nav-is-active');
   }
 }
