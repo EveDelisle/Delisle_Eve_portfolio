@@ -1,5 +1,12 @@
-.swiper {
+.carousel {
     height: 800px;
+
+    .carousel-wrapper {
+        display: flex;
+        flex-direction: row;
+        width: auto;
+        height: 100%;
+    }
 
     .lien {
         // display: inline-block;
@@ -74,12 +81,16 @@
     }
 }
 
-.swiper-slide {
+.carousel-slide {
     position: relative;
     display: flex;
+    min-width: 100vw;
+    height: 100vh;
+
+    flex: 0 0 100vw;
 }
 
-.swiper-content {
+.carousel-content {
     display: flex;
     width: 600px;
 
@@ -107,7 +118,7 @@
     }
 }
 
-.swiper-media {
+.carousel-media {
     position: absolute;
     z-index: -1;
     bottom: 0;

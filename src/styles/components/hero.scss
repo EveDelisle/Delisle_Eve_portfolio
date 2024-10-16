@@ -261,6 +261,11 @@
             height: 118%;
             width: 48%;
         }
+
+        @media screen and (max-width: 475px) {
+            height: 118%;
+            width: 60%;
+        }
     }
 
     h1 {
@@ -459,6 +464,14 @@
         top: -52%;
     }
 
+    @media screen and (max-width: 475px) {
+        top: -49%;
+    }
+
+    @media screen and (max-width: 390px) {
+        top: -42%;
+    }
+
     .ligne {
         display: flex;
         align-items: center;
@@ -491,6 +504,10 @@
 
         @media screen and (max-width: 500px) {
             transform: translate(-55%, 0);
+        }
+
+        @media screen and (max-width: 475px) {
+            transform: translate(-70%, 0);
         }
     }
 
