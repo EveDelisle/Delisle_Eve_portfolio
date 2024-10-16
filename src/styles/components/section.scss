@@ -140,9 +140,13 @@
 
     .groupes_etoiles {
         position: relative;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
 
         .etoile_grosse {
             .etoile {
+                width: 8vw;
+                height: 8vw;
                 stroke-width: 0.2px;
 
                 animation: float 6s ease-in-out infinite;

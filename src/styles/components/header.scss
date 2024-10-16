@@ -1,5 +1,6 @@
 .header {
     border-bottom: 1px solid var(--color-primary);
+
     .logo {
         color: var(--color-secondaire-typo);
         a {
@@ -45,7 +46,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 40px 0;
+        padding: 30px 0;
         @media screen and (max-width: 1024px) {
             padding: 30px 0;
         }
