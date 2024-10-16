@@ -6,6 +6,7 @@
         flex-direction: row;
         width: auto;
         height: 100%;
+        //gap: 30px;
     }
 
     .lien {
@@ -83,26 +84,41 @@
 
 .carousel-slide {
     position: relative;
-    display: flex;
-    min-width: 100vw;
-    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
 
-    flex: 0 0 100vw;
+    width: 100vw;
+    min-width: 100vw;
+    height: 90vh;
+    padding: 5vw;
+}
+.carousel-content {
+    height: 100%;
+    display: grid;
+    align-items: flex-end;
 }
 
-.carousel-content {
-    display: flex;
-    width: 600px;
+.content {
+    display: grid;
+    grid-template-columns: 0fr 6fr;
+    width: 575px;
 
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
 
-    gap: 39px;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.info_projet {
+    display: grid;
+
+    gap: 45px;
 }
 
 .ligne_projet {
     width: 1px;
-    height: 380px;
+    height: 100%;
     background-color: var(--color-secondaire-typo);
 }
 
@@ -123,8 +139,10 @@
     z-index: -1;
     bottom: 0;
     left: 25%;
+    max-width: 1070px;
     width: 1070px;
     height: 661px;
+    max-height: 661px;
     img {
         width: 100%;
         height: 100%;
@@ -135,14 +153,15 @@
 }
 
 .numero_projet {
+    height: 50vh;
+    position: absolute;
+    z-index: -2;
+    top: -35%;
+    right: -25%;
+
     .h1-bkg {
         color: transparent; /* No fill color */
         -webkit-text-stroke: 2px var(--color-primary); /* White stroke of 2px width */
         text-wrap: nowrap;
-
-        position: absolute;
-        z-index: -2;
-        right: 5%;
-        top: -13%;
     }
 }
