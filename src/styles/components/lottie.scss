@@ -43,10 +43,13 @@
     left: 40%;
     z-index: -10;
 
-    /* transform: translate(
-        -50%,
-        50%
-    ); /* Centers the Lottie relative to its position */
+    @media screen and (max-width: 1535px) {
+        bottom: 45%;
+    }
+
+    @media screen and (max-width: 768px) {
+        bottom: 48%;
+    }
 }
 
 .animation {
@@ -58,13 +61,38 @@
 .lottie_livre {
     position: absolute;
     top: 10%;
-    right: -35%;
+    right: -36%;
     z-index: -10;
 
     .animation {
         svg {
             max-height: 100%;
         }
+    }
+
+    @media screen and (max-width: 1568px) {
+        top: 17%;
+        right: -38%;
+    }
+
+    @media screen and (max-width: 1130px) {
+        top: 19%;
+        right: -40%;
+    }
+
+    @media screen and (max-width: 983px) {
+        top: 24%;
+        right: -40%;
+    }
+
+    @media screen and (max-width: 850px) {
+        top: 22%;
+        right: -40%;
+    }
+
+    @media screen and (max-width: 768px) {
+        top: 10%;
+        right: -36%;
     }
 }
 
@@ -80,17 +108,75 @@
         }
     }
 }
+.lottie_video {
+    margin-top: 30px;
+    margin-right: 15px;
+}
 
 .lottie_fleche_video {
     position: absolute;
-    top: -18%;
+    top: -19%;
 
-    right: 10%;
-    z-index: -10;
+    left: -15%;
+    z-index: -2;
 
     .animation {
         svg {
             max-height: 100%;
         }
+    }
+
+    @media screen and (max-width: 1570px) {
+        top: -19%;
+        left: -22%;
+    }
+    @media screen and (max-width: 1292px) {
+        top: -23%;
+        left: -26%;
+    }
+
+    @media screen and (max-width: 1036px) {
+        top: -22%;
+        left: -30%;
+    }
+
+    @media screen and (max-width: 768px) {
+        top: -32%;
+        left: -38%;
+    }
+
+    @media screen and (max-width: 745px) {
+        top: -31%;
+        left: -41%;
+    }
+
+    @media screen and (max-width: 584px) {
+        top: -30%;
+        left: -45%;
+    }
+
+    @media screen and (max-width: 500px) {
+        top: -29%;
+        left: -47%;
+    }
+
+    @media screen and (max-width: 452px) {
+        top: -29%;
+        left: -50%;
+    }
+
+    @media screen and (max-width: 436px) {
+        top: -29%;
+        left: -52%;
+    }
+
+    @media screen and (max-width: 409px) {
+        top: -28%;
+        left: -52%;
+    }
+
+    @media screen and (max-width: 376px) {
+        top: -26%;
+        left: -52%;
     }
 }

@@ -32,19 +32,41 @@
     }
 
     .description_lien_video {
-        width: 1599px;
+        max-width: 1599px;
 
         display: grid;
+        gap: 20px;
+        flex-wrap: wrap;
 
         p {
-            width: 1082px;
+            max-width: 1082px;
+
+            @media screen and (max-width: 500px) {
+                max-width: 360px;
+            }
         }
         .titre_cercle {
             display: flex;
             gap: 150px;
-            height: 165px;
+            max-height: 165px;
 
             align-items: flex-end;
+
+            @media screen and (max-width: 500px) {
+                gap: 100px;
+            }
+
+            @media screen and (max-width: 414px) {
+                gap: 75px;
+            }
+
+            @media screen and (max-width: 388px) {
+                gap: 60px;
+            }
+
+            @media screen and (max-width: 375px) {
+                gap: 50px;
+            }
 
             .cercle {
                 display: flex;
@@ -53,15 +75,12 @@
                 height: 100%;
 
                 @media screen and (max-width: 500px) {
-                    display: none;
                 }
             }
 
             .forme_cercle {
                 border-radius: 100%;
                 border: 1px solid var(--color-white);
-                // width: 70px;
-                // height: 70px;
 
                 width: 3.65vw;
                 height: 3.65vw; //keep it a perfect circle
@@ -77,14 +96,27 @@
         justify-content: flex-end;
 
         width: 80vw;
+
+        @media screen and (max-width: 435px) {
+        }
     }
 
     .video {
         display: flex;
         align-items: flex-end;
+        margin-left: 15px;
+
         a {
             position: relative;
             padding: 20px;
+
+            @media screen and (max-width: 462px) {
+                padding: 10px;
+            }
+
+            @media screen and (max-width: 435px) {
+                padding: 5px;
+            }
         }
 
         a::after {
@@ -139,9 +171,12 @@
     }
 
     .groupes_etoiles {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px;
         position: relative;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
 
         .etoile_grosse {
             .etoile {
@@ -155,18 +190,25 @@
 
         .etoile_petite {
             position: absolute;
-            top: 23px;
-            left: 4px;
+            top: 0;
+            left: 0;
 
             animation: twinkle 6s infinite ease-in-out; /* Continuous twinkling */
+
+            .etoile {
+                width: 2vw;
+                height: 2vw;
+            }
         }
 
         .etoile_moyenne {
             position: absolute;
-            bottom: -11px;
-            left: 100px;
+            bottom: 0;
+            right: 0;
 
             animation: twinkle 4s infinite ease-in-out; /* Continuous twinkling */
+            width: 3vw;
+            height: 3vw;
         }
 
         /* Keyframes for twinkling effect */
@@ -187,7 +229,7 @@
         position: absolute;
         top: 33%;
         left: -8%;
-        z-index: -1;
+        z-index: -3;
 
         width: 20vw;
         height: 20vw; //keep it a perfect circle
