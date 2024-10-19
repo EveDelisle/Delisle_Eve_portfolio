@@ -107,6 +107,26 @@
             max-height: 100%;
         }
     }
+
+    @media screen and (max-width: 1750px) {
+        bottom: -40%;
+        left: -42%;
+    }
+
+    @media screen and (max-width: 1430px) {
+        bottom: -42%;
+        left: -44%;
+    }
+
+    @media screen and (max-width: 1152px) {
+        left: -49%;
+        bottom: -46%;
+    }
+
+    @media screen and (max-width: 625px) {
+        left: -49%;
+        bottom: -48%;
+    }
 }
 .lottie_video {
     margin-top: 30px;
