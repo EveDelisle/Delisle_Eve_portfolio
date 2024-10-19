@@ -2,7 +2,20 @@
 
 .titre_bkg {
     position: relative;
+    max-height: 300px;
     height: 300px;
+
+    @media screen and (max-width: 990px) {
+        max-height: 150px;
+    }
+
+    @media screen and (max-width: 585px) {
+        max-height: 75px;
+    }
+
+    @media screen and (max-width: 600px) {
+        max-height: 75px;
+    }
 
     .h1-bkg {
         color: transparent; /* No fill color */
