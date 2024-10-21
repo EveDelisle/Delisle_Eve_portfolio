@@ -13,8 +13,8 @@
         max-height: 75px;
     }
 
-    @media screen and (max-width: 600px) {
-        max-height: 75px;
+    @media screen and (max-width: 499px) {
+        max-height: 50px;
     }
 
     .h1-bkg {
@@ -377,6 +377,7 @@
     }
 
     .etoile_seule {
+        display: none;
         position: absolute;
         top: 90%;
         right: 10%;
@@ -401,6 +402,7 @@
 .mes_projets {
     padding: 172px 0;
     position: relative;
+    // height: 1000px;
 
     .wrapper {
         margin-top: 172px;
