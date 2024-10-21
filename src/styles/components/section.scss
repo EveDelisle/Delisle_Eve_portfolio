@@ -253,6 +253,26 @@
         background-color: var(--color-quaternaire);
     }
 
+    .gros_cercle_deux {
+        display: none;
+        position: absolute;
+        top: 85%;
+        right: -8%;
+        z-index: -3;
+
+        width: 20vw;
+        height: 20vw; //keep it a perfect circle
+        max-width: 80vw;
+        max-height: 80vh;
+        border-radius: 100%;
+        border: 1px solid var(--color-white);
+        background-color: var(--color-quaternaire);
+
+        @media screen and (max-width: 500px) {
+            display: block;
+        }
+    }
+
     .aspects {
         padding: 0 7vw;
         display: grid;
@@ -305,6 +325,74 @@
             align-items: center;
         }
     }
+
+    /*---------------DECORATIONS LIBRES-------------------------*/
+    .deuxieme_cercle {
+        display: none;
+        position: absolute;
+        top: 50%;
+        right: 20%;
+        height: 100%;
+
+        @media screen and (max-width: 500px) {
+            display: block;
+        }
+    }
+
+    .troisieme_cercle {
+        display: none;
+        position: absolute;
+        top: 80%;
+        left: 7%;
+        height: 100%;
+
+        @media screen and (max-width: 500px) {
+            display: block;
+        }
+    }
+
+    @keyframes float {
+        0% {
+            transform: translateY(0px);
+        }
+        50% {
+            transform: translateY(-20px); /* Move up by 20px */
+        }
+        100% {
+            transform: translateY(0px);
+        }
+    }
+
+    .forme_cercle {
+        border-radius: 100%;
+        border: 1px solid var(--color-white);
+
+        width: 3.65vw;
+        height: 3.65vw; //keep it a perfect circle
+        max-width: 80vw;
+        max-height: 80vh;
+        background-color: var(--color-quaternaire);
+
+        animation: float 4s ease-in-out infinite;
+    }
+
+    .etoile_seule {
+        position: absolute;
+        top: 90%;
+        right: 10%;
+
+        .etoile {
+            width: 8vw;
+            height: 8vw;
+            stroke-width: 0.2px;
+
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @media screen and (max-width: 500px) {
+            display: block;
+        }
+    }
 }
 
 /*-------------------------------------------------------------------*/
@@ -324,11 +412,28 @@
             display: flex;
             align-items: center;
             gap: 17px;
+            margin-right: 15px;
 
             .ligne {
-                width: 761px;
+                width: 70vw;
                 height: 1px;
                 background-color: var(--color-primary);
+
+                @media screen and (max-width: 1140px) {
+                    width: 60vw;
+                }
+
+                @media screen and (max-width: 703px) {
+                    width: 50vw;
+                }
+
+                @media screen and (max-width: 500px) {
+                    width: 45vw;
+                }
+
+                @media screen and (max-width: 499px) {
+                    width: 35vw;
+                }
             }
 
             .etoile {
@@ -343,8 +448,8 @@
 
     .grosse_etoile_verte_gauche {
         position: absolute;
-        bottom: 3%;
-        left: 15%;
+        top: 0;
+        left: 0;
 
         animation: float 3s ease-in-out infinite;
     }
