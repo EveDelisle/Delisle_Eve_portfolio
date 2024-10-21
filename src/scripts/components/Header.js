@@ -52,16 +52,19 @@ export default class Header {
 
   initNavMobile() {
     const toggle = this.element.querySelector('.js-toggle');
+    const links = this.element.querySelectorAll('.js-nav-link');
 
-    /*const links = this.element.querySelectorAll('.js-nav-link');
-
-    for (let i = 0; i < links.length; i++) {
-      const link = links[i];
-
-      links.addEventListener('click', this.closeNav.bind(this));
-    }*/
-
+    // Add click listener for the toggle button
     toggle.addEventListener('click', this.onToggleNav.bind(this));
+
+    // Add click listeners for each link
+    links.forEach((link) => {
+      link.addEventListener('click', (event) => {
+        this.closeNav();
+        // Optional: Prevent default behavior if necessary
+        // event.preventDefault();
+      });
+    });
   }
 
   onToggleNav() {
