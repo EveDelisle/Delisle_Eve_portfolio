@@ -123,12 +123,18 @@
             position: relative;
             padding: 20px;
 
+            transition: transform 0.3s ease, color 0.4s ease;
+
             @media screen and (max-width: 462px) {
                 padding: 10px;
             }
 
             @media screen and (max-width: 435px) {
                 padding: 5px;
+            }
+
+            &:hover {
+                background-color: var(--color-quaternaire);
             }
         }
 
