@@ -1,0 +1,41 @@
+.test {
+    height: 1900px;
+    position: relative;
+
+    .wrapper {
+        width: 100vw;
+    }
+
+    .groupe1 {
+        position: absolute;
+        right: 0px;
+
+        width: 50vw;
+    }
+
+    .photos {
+        .gauche {
+            display: block;
+            position: absolute;
+            z-index: -2;
+            right: 0;
+            img {
+                width: 100%;
+            }
+        }
+        .droite {
+            position: absolute;
+            top: 0;
+            right: 0;
+            display: block;
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    .info_card {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
