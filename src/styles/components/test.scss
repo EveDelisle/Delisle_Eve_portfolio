@@ -1,41 +1,197 @@
-.test {
+.projet-test {
     height: 1900px;
     position: relative;
 
     .wrapper {
         width: 100vw;
+        height: 100vh;
     }
 
-    .groupe1 {
-        position: absolute;
-        right: 0px;
+    .projet-sauvemarin {
+        position: relative;
+        padding: 15px;
+        width: 100%;
+        height: 100%;
+    }
 
-        width: 50vw;
+    .projet-container {
+        width: 70vw;
+
+        max-width: 1331px;
+
+        max-height: 903px;
+        height: 80vh;
+        position: absolute;
+
+        right: 0;
     }
 
     .photos {
+        margin: 0 auto;
+        width: 100%;
         .gauche {
             display: block;
             position: absolute;
-            z-index: -2;
+            z-index: -3;
+            top: 20vh;
             right: 0;
             img {
-                width: 100%;
+                max-width: 100%;
+
+                height: auto;
+                object-fit: cover;
             }
         }
         .droite {
             position: absolute;
-            top: 0;
+            z-index: -2;
+            top: 20vh;
             right: 0;
             display: block;
             img {
                 width: 100%;
+                height: auto;
+                object-fit: cover;
+            }
+        }
+
+        @media screen and (max-width: 500px) {
+            .gauche,
+            .droite {
+                right: auto;
             }
         }
     }
 
-    .info_card {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+    .phone-image {
+        width: 80%;
+        height: auto;
+        min-width: 700px;
+    }
+
+    .type_projet {
+        display: flex;
+        gap: 23px;
+        align-items: center;
+
+        .divider_type {
+            height: 20px;
+            width: 1px;
+            background-color: black;
+        }
+    }
+
+    .text-container {
+        width: 100%;
+        height: 100%;
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            max-width: 500px;
+            position: relative;
+            top: 30%;
+            left: 0;
+        }
+
+        .liens {
+            position: absolute;
+            bottom: 0vh;
+            right: 0;
+        }
+    }
+
+    .h1-bkg-projet {
+        position: absolute;
+        top: 0;
+        z-index: -4;
+        line-height: 115%;
+        text-align: right;
+        color: var(--color-text-bkg);
+    }
+
+    @media screen and (max-width: 1024px) {
+        .projet-container {
+            right: auto;
+            width: 80vw;
+        }
+
+        .text-container .content {
+            top: 0;
+        }
+
+        .text-container .liens {
+            bottom: 10%;
+        }
+
+        .phone-image {
+            width: 100%;
+        }
+
+        .photos .gauche,
+        .photos .droite {
+            top: 15vh;
+            right: auto;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .text-container .liens {
+            bottom: 12%;
+        }
+
+        .photos .gauche,
+        .photos .droite {
+            right: -10%;
+        }
+    }
+
+    @media screen and (max-width: 500px) {
+        .photos .gauche,
+        .photos .droite {
+            right: -40%;
+        }
+
+        .h1-bkg-projet {
+            line-height: 275%;
+            top: -10%;
+        }
+    }
+
+    @media screen and (max-width: 465px) {
+        .photos .gauche,
+        .photos .droite {
+            right: -50%;
+        }
+
+        .h1-bkg-projet {
+            font-size: 135px;
+            top: -4%;
+        }
+    }
+
+    @media screen and (max-width: 465px) {
+        .photos .gauche,
+        .photos .droite {
+            right: -40%;
+        }
+
+        .phone-image {
+            min-width: 600px;
+        }
+    }
+
+    @media screen and (max-width: 450px) {
+        .phone-image {
+            min-width: 600px;
+        }
+    }
+
+    @media screen and (max-width: 410px) {
+        .photos .gauche,
+        .photos .droite {
+            right: -45%;
+        }
     }
 }
