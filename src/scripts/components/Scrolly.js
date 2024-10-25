@@ -3,9 +3,7 @@ export default class Scrolly {
     this.element = element;
 
     this.options = {
-      //nous voulons qu'il soit globale
-
-      rootMargin: '0px', //les quatre côtés de ma fenêtre de navigateur ou juste un '0px'
+      rootMargin: '0px', // Define margins for the viewport
     };
 
     this.init();
@@ -31,8 +29,11 @@ export default class Scrolly {
       const startPosition =
         parseFloat(item.getAttribute('data-start-position')) || 0; // Starting position of the element
       const direction = item.getAttribute('data-direction') || 'horizontal'; // 'horizontal' or 'vertical'
+
       const directionX =
-        item.getAttribute('data-direction-x') || 'left-to-right'; // Horizontal movement direction (left-to-right or right-to-left)
+        item.getAttribute('data-direction-x') || 'left-to-right'; // Horizontal movement direction
+      const directionY =
+        item.getAttribute('data-direction-y') || 'top-to-bottom'; // Vertical movement direction
 
       // Get max and min positions (optional)
       const maxPosition =
@@ -53,9 +54,13 @@ export default class Scrolly {
         item.style.transform = `translateX(${newPosition}px)`;
       }
 
-      // Vertical movement (opposite to scroll direction)
+      // Vertical movement
       if (direction === 'vertical') {
-        newPosition = startPosition - scrollY * scrollSpeed;
+        if (directionY === 'top-to-bottom') {
+          newPosition = scrollY * scrollSpeed + startPosition; // Move top to bottom
+        } else if (directionY === 'bottom-to-top') {
+          newPosition = startPosition - scrollY * scrollSpeed; // Move bottom to top
+        }
         newPosition = Math.min(Math.max(newPosition, minPosition), maxPosition); // Apply limits
         item.style.transform = `translateY(${newPosition}px)`;
       }

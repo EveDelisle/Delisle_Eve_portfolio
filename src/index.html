@@ -164,16 +164,7 @@
     </div>
 </section>
 <!--Section à propos-->
-<section
-    class="a_propos"
-    id="apropos"
-    data-scrolly
-    data-scrolly-speed="0.2"
-    data-start-position="253"
-    data-direction="vertical"
-    data-max-position="0"
-    data-min-position="253"
->
+<section class="a_propos" id="apropos">
     <div class="wrapper">
         <!-----------------Ma description de moi + mon lien vidéo + mon petit lottie de flèche + les étoiles------------>
         <div class="description_lien_video">
@@ -187,6 +178,7 @@
                     data-direction="vertical"
                     data-max-position="500"
                     data-min-position="0"
+                    data-direction-y="bottom-to-top"
                 >
                     <div class="forme_cercle"></div>
                 </div>
@@ -223,6 +215,7 @@
                     data-direction="vertical"
                     data-max-position="500"
                     data-min-position="0"
+                    data-direction-y="bottom-to-top"
                 >
                     <div class="etoile_petite">
                         <svg class="etoile" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27 27" fill="none">
@@ -387,6 +380,7 @@
         data-direction="vertical"
         data-max-position="500"
         data-min-position="0"
+        data-direction-y="bottom-to-top"
     ></div>
     <div
         class="gros_cercle_deux"
@@ -396,6 +390,7 @@
         data-direction="vertical"
         data-max-position="500"
         data-min-position="0"
+        data-direction-y="bottom-to-top"
     ></div>
 
     <div
@@ -406,6 +401,7 @@
         data-direction="vertical"
         data-max-position="500"
         data-min-position="0"
+        data-direction-y="bottom-to-top"
     >
         <div class="forme_cercle"></div>
     </div>
@@ -418,6 +414,7 @@
         data-direction="vertical"
         data-max-position="300"
         data-min-position="0"
+        data-direction-y="bottom-to-top"
     >
         <svg class="etoile" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27 27" fill="none">
             <path
@@ -436,6 +433,7 @@
         data-direction="vertical"
         data-max-position="500"
         data-min-position="0"
+        data-direction-y="bottom-to-top"
     >
         <div class="forme_cercle"></div>
     </div>
@@ -667,12 +665,43 @@
         <div class="projet-sauvemarin">
             <div class="projet-container">
                 <div class="photos">
-                    <img class="gauche phone-image" src="assets/images/phone_gauche.png" alt="phone à gauche" />
-                    <img class="droite phone-image" src="assets/images/phone_droite.png" alt="phone à droite" />
+                    <img
+                        class="gauche phone-image"
+                        src="assets/images/phone_gauche.png"
+                        alt="phone à gauche"
+                        data-scrolly
+                        data-scrolly-speed="0.1"
+                        data-start-position="500"
+                        data-direction="vertical"
+                        data-max-position="0"
+                        data-min-position="0"
+                        data-direction-y="bottom-to-top"
+                    />
+                    <img
+                        class="droite phone-image"
+                        src="assets/images/phone_droite.png"
+                        alt="phone à droite"
+                        data-scrolly
+                        data-scrolly-speed="0.2"
+                        data-start-position="1000"
+                        data-direction="vertical"
+                        data-max-position="0"
+                        data-min-position="0"
+                        data-direction-y="bottom-to-top"
+                    />
                 </div>
 
                 <div class="text-container">
-                    <div class="content">
+                    <div
+                        class="content"
+                        data-scrolly
+                        data-scrolly-speed="0.2"
+                        data-start-position="950"
+                        data-direction="vertical"
+                        data-max-position="0"
+                        data-min-position="0"
+                        data-direction-y="bottom-to-top"
+                    >
                         <div class="type_projet">
                             <p class="p-small">Design d'un jeu mobile</p>
                             <div class="divider_type"></div>
@@ -681,29 +710,50 @@
                         <h3>Sauve Marin</h3>
                         <p>Design d'une application d'un jeu mobile avec prototypage.</p>
                     </div>
+                </div>
 
-                    <div class="liens">
-                        <div class="lien_details">
-                            <a
-                                href="https://www.behance.net/gallery/210551423/Sauve-Marin"
-                                target="_blank"
-                                class="btn_projet"
-                                >Voir les détails</a
-                            >
-                        </div>
+                <div
+                    class="liens"
+                    class="content"
+                    data-scrolly
+                    data-scrolly-speed="0.1"
+                    data-start-position="600"
+                    data-direction="vertical"
+                    data-max-position="0"
+                    data-min-position="0"
+                    data-direction-y="bottom-to-top"
+                >
+                    <div class="lien_details">
+                        <a
+                            href="https://www.behance.net/gallery/210551423/Sauve-Marin"
+                            target="_blank"
+                            class="btn_projet"
+                            >Voir les détails</a
+                        >
+                    </div>
 
-                        <div class="lien_site">
-                            <a
-                                href="https://www.behance.net/gallery/210551423/Sauve-Marin"
-                                target="_blank"
-                                class="btn_projet"
-                                >Voir le site</a
-                            >
-                        </div>
+                    <div class="lien_site">
+                        <a
+                            href="https://www.behance.net/gallery/210551423/Sauve-Marin"
+                            target="_blank"
+                            class="btn_projet"
+                            >Voir le site</a
+                        >
                     </div>
                 </div>
 
-                <div class="h1-bkg-projet">Sauve Marin</div>
+                <div
+                    class="h1-bkg-projet"
+                    data-scrolly
+                    data-scrolly-speed="0.1"
+                    data-start-position="-450"
+                    data-direction="vertical"
+                    data-max-position="0"
+                    data-min-position="0"
+                    data-direction-y="top-to-bottom"
+                >
+                    Sauve Marin
+                </div>
             </div>
         </div>
     </div>

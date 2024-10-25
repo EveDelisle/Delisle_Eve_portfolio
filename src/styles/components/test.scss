@@ -94,12 +94,12 @@
             top: 30%;
             left: 0;
         }
+    }
 
-        .liens {
-            position: absolute;
-            bottom: 0vh;
-            right: 0;
-        }
+    .liens {
+        position: absolute;
+        bottom: 0vh;
+        right: 0;
     }
 
     .h1-bkg-projet {
@@ -111,6 +111,33 @@
         color: var(--color-text-bkg);
     }
 
+    @media screen and (max-width: 1760px) {
+        .text-container .content {
+            top: 15%;
+        }
+
+        .photos .gauche,
+        .photos .droite {
+            top: 25vh;
+        }
+
+        .h1-bkg-projet {
+            right: 5%;
+        }
+    }
+
+    @media screen and (max-width: 1625px) {
+        .h1-bkg-projet {
+            right: 0;
+        }
+    }
+
+    @media screen and (max-width: 1500px) {
+        .text-container .content {
+            left: -5%;
+        }
+    }
+
     @media screen and (max-width: 1024px) {
         .projet-container {
             right: auto;
@@ -119,9 +146,10 @@
 
         .text-container .content {
             top: 0;
+            left: 0;
         }
 
-        .text-container .liens {
+        .liens {
             bottom: 10%;
         }
 
@@ -134,16 +162,36 @@
             top: 15vh;
             right: auto;
         }
+
+        .h1-bkg-projet {
+            line-height: 135%;
+            right: auto;
+        }
     }
 
     @media screen and (max-width: 768px) {
-        .text-container .liens {
+        .liens {
             bottom: 12%;
         }
 
         .photos .gauche,
         .photos .droite {
             right: -10%;
+        }
+
+        .h1-bkg-projet {
+            line-height: 180%;
+        }
+    }
+
+    @media screen and (max-width: 590px) {
+        .photos .gauche,
+        .photos .droite {
+            right: -25%;
+        }
+
+        .h1-bkg-projet {
+            line-height: 225%;
         }
     }
 
@@ -171,20 +219,15 @@
         }
     }
 
-    @media screen and (max-width: 465px) {
-        .photos .gauche,
-        .photos .droite {
-            right: -40%;
-        }
-
-        .phone-image {
-            min-width: 600px;
-        }
-    }
-
     @media screen and (max-width: 450px) {
         .phone-image {
             min-width: 600px;
+        }
+
+        .photos .gauche,
+        .photos .droite {
+            right: -40%;
+            top: 18vh;
         }
     }
 
@@ -192,6 +235,22 @@
         .photos .gauche,
         .photos .droite {
             right: -45%;
+        }
+
+        .h1-bkg-projet {
+            font-size: 125px;
+        }
+    }
+
+    @media screen and (max-width: 390px) {
+        .photos .gauche,
+        .photos .droite {
+            right: -50%;
+        }
+
+        .h1-bkg-projet {
+            font-size: 115px;
+            top: 5%;
         }
     }
 }
