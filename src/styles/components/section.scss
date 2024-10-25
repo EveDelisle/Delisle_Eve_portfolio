@@ -507,6 +507,11 @@
     .photos {
         margin: 0 auto;
         width: 100%;
+        position: relative;
+        top: 0;
+        right: 0;
+        z-index: -2;
+
         .gauche {
             display: block;
             position: absolute;
@@ -541,7 +546,7 @@
         }
     }
 
-    .phone-image {
+    .image-mockup {
         width: 80%;
         height: auto;
         min-width: 700px;
@@ -551,6 +556,7 @@
         display: flex;
         gap: 23px;
         align-items: center;
+        width: 200%;
 
         .divider_type {
             height: 20px;
@@ -566,11 +572,12 @@
         .content {
             display: flex;
             flex-direction: column;
-            gap: 25px;
+            gap: 15px;
             max-width: 500px;
             position: relative;
             top: 30%;
             left: 0;
+            z-index: 4;
         }
     }
 
@@ -583,9 +590,10 @@
     .h1-bkg-projet {
         position: absolute;
         top: 0;
+        text-align: center;
         z-index: -4;
-        line-height: 115%;
-        text-align: right;
+        line-height: 140%;
+
         color: var(--color-text-bkg);
     }
 
@@ -596,9 +604,7 @@
             top: 15%;
         }
 
-        .photos .gauche,
-        .photos .droite {
-            top: 25vh;
+        .photos {
         }
 
         .h1-bkg-projet {
@@ -616,9 +622,15 @@
         .text-container .content {
             left: -5%;
         }
+
+        .projet-baie .content,
+        .projet-gelato .content,
+        .projet-buzz .content {
+            left: 0;
+        }
     }
 
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: 1040px) {
         .projet-container {
             right: auto;
             width: 80vw;
@@ -637,9 +649,8 @@
             width: 100%;
         }
 
-        .photos .gauche,
-        .photos .droite {
-            top: 15vh;
+        .photos {
+            // top: 15vh;
             right: auto;
         }
 
@@ -666,25 +677,35 @@
             bottom: 12%;
         }
 
-        .photos .gauche,
-        .photos .droite {
-            right: -10%;
+        .photos {
+            right: 0;
+            top: -5%;
         }
 
         .h1-bkg-projet {
             line-height: 180%;
         }
 
-        .projet-baie .photos .gauche,
-        .photos .droite {
-            right: -200%;
+        .photos-impair .gauche,
+        .photos-impair .droite {
+            //  right: -25%;
+        }
+    }
+
+    @media screen and (max-width: 670px) {
+        .photos {
+            right: -15%;
         }
     }
 
     @media screen and (max-width: 590px) {
-        .photos .gauche,
-        .photos .droite {
+        .photos {
             right: -25%;
+            top: -5%;
+        }
+
+        .photos-impair {
+            //  right: -42%;
         }
 
         .h1-bkg-projet {
@@ -693,9 +714,13 @@
     }
 
     @media screen and (max-width: 500px) {
-        .photos .gauche,
-        .photos .droite {
-            right: -40%;
+        .photos {
+            right: 35%;
+            top: -7%;
+        }
+
+        .photos-impair {
+            //  right: -65%;
         }
 
         .h1-bkg-projet {
@@ -705,9 +730,13 @@
     }
 
     @media screen and (max-width: 465px) {
-        .photos .gauche,
-        .photos .droite {
-            right: -50%;
+        .photos {
+            top: -9%;
+        }
+
+        .photos-impair {
+            //  right: -75%;
+            //  top: 13vh;
         }
 
         .h1-bkg-projet {
@@ -721,33 +750,41 @@
             min-width: 600px;
         }
 
-        .photos .gauche,
-        .photos .droite {
-            right: -40%;
-            top: 18vh;
+        .photos {
+        }
+
+        .photos-impair {
+            //  right: -65%;
         }
     }
 
     @media screen and (max-width: 410px) {
-        .photos .gauche,
-        .photos .droite {
-            right: -45%;
+        .photos {
+            right: 40%;
         }
 
         .h1-bkg-projet {
             font-size: 125px;
         }
+
+        .photos-impair {
+            //   right: -70%;
+        }
     }
 
     @media screen and (max-width: 390px) {
-        .photos .gauche,
-        .photos .droite {
-            right: -50%;
+        .photos {
+            right: 50%;
         }
 
         .h1-bkg-projet {
             font-size: 115px;
             top: 5%;
+        }
+
+        .photos-impair {
+            //  right: -75%;
+            // top: 20vh;
         }
     }
 }
