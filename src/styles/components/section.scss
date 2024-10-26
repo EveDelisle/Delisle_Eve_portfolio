@@ -409,13 +409,33 @@
 /*-------------------------------------------------------------------*/
 /*------------------------PROJETS--------------------------------------*/
 .projet-test {
+    max-height: 5000px;
     height: 5000px;
     position: relative;
     padding: 150px 0;
 
+    @media screen and (max-width: 1366px) {
+        max-height: 4600px;
+    }
+
+    @media screen and (max-width: 500px) {
+        max-height: 4300px;
+    }
+
+    .conteneur-titre {
+        max-width: $breakpoint-lg;
+        width: calc(100% - var(--spacing-md));
+        margin: 0 auto;
+        padding: 0 20px;
+    }
     .wrapper {
         width: 100vw;
         height: 100vh;
+
+        @media screen and (max-width: 500px) {
+            display: grid;
+            gap: 800px;
+        }
     }
 
     .titre_section {
@@ -478,9 +498,7 @@
         margin-top: -50px;
     }
 
-    .projet-baie .projet-container,
-    .projet-gelato .projet-container,
-    .projet-buzz .projet-container {
+    .un-projet:nth-child(odd) .projet-container {
         width: 70vw;
 
         max-width: 1331px;
@@ -604,9 +622,6 @@
             top: 15%;
         }
 
-        .photos {
-        }
-
         .h1-bkg-projet {
             right: 5%;
         }
@@ -623,10 +638,14 @@
             left: -5%;
         }
 
-        .projet-baie .content,
-        .projet-gelato .content,
-        .projet-buzz .content {
+        .un-projet:nth-child(odd) .content {
             left: 0;
+        }
+    }
+
+    @media screen and (max-width: 1250px) {
+        .un-projet:nth-child(odd) .photos {
+            top: 5%;
         }
     }
 
@@ -672,6 +691,13 @@
                         data-direction="vertical"
                         data-direction-y="bottom-to-top"*/
 
+    @media screen and (max-width: 860px) {
+        .un-projet:nth-child(odd) .photos {
+            left: 25%;
+            top: -5%;
+        }
+    }
+
     @media screen and (max-width: 768px) {
         .liens {
             bottom: 12%;
@@ -686,9 +712,8 @@
             line-height: 180%;
         }
 
-        .photos-impair .gauche,
-        .photos-impair .droite {
-            //  right: -25%;
+        .un-projet:nth-child(odd) .photos {
+            left: 20%;
         }
     }
 
@@ -704,12 +729,12 @@
             top: -5%;
         }
 
-        .photos-impair {
-            //  right: -42%;
-        }
-
         .h1-bkg-projet {
             line-height: 225%;
+        }
+
+        .un-projet:nth-child(odd) .photos {
+            left: 50%;
         }
     }
 
@@ -719,13 +744,13 @@
             top: -7%;
         }
 
-        .photos-impair {
-            //  right: -65%;
-        }
-
         .h1-bkg-projet {
             line-height: 275%;
             top: -10%;
+        }
+
+        .un-projet:nth-child(odd) .photos {
+            left: -35%;
         }
     }
 
@@ -734,57 +759,43 @@
             top: -9%;
         }
 
-        .photos-impair {
-            //  right: -75%;
-            //  top: 13vh;
-        }
-
         .h1-bkg-projet {
             font-size: 135px;
             top: -4%;
         }
-    }
 
-    @media screen and (max-width: 450px) {
-        .phone-image {
+        .image-mockup {
+            width: 80%;
+            height: auto;
             min-width: 600px;
-        }
-
-        .photos {
-        }
-
-        .photos-impair {
-            //  right: -65%;
         }
     }
 
     @media screen and (max-width: 410px) {
         .photos {
-            right: 40%;
+            right: 30%;
         }
 
         .h1-bkg-projet {
             font-size: 125px;
         }
 
-        .photos-impair {
-            //   right: -70%;
+        .image-mockup {
+            width: 80%;
+            height: auto;
+            min-width: 525px;
         }
     }
 
     @media screen and (max-width: 390px) {
         .photos {
-            right: 50%;
+            right: 40%;
+            top: -2vh;
         }
 
         .h1-bkg-projet {
             font-size: 115px;
             top: 5%;
-        }
-
-        .photos-impair {
-            //  right: -75%;
-            // top: 20vh;
         }
     }
 }
