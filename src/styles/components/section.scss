@@ -409,17 +409,17 @@
 /*-------------------------------------------------------------------*/
 /*------------------------PROJETS--------------------------------------*/
 .projet-test {
-    max-height: 5000px;
-    height: 5000px;
+    max-height: 5300px;
+    height: 5300px;
     position: relative;
     padding: 150px 0;
 
-    @media screen and (max-width: 1366px) {
-        max-height: 4600px;
+    @media screen and (max-width: 940px) {
+        max-height: 4800px;
     }
 
     @media screen and (max-width: 500px) {
-        max-height: 4300px;
+        max-height: 3900px;
     }
 
     .conteneur-titre {
@@ -434,7 +434,7 @@
 
         @media screen and (max-width: 500px) {
             display: grid;
-            gap: 800px;
+            gap: 700px;
         }
     }
 
@@ -510,6 +510,10 @@
         left: 0;
     }
 
+    .un-projet:nth-child(odd) {
+        margin-bottom: 100px;
+    }
+
     .projet-container {
         width: 70vw;
 
@@ -538,7 +542,7 @@
             right: 0;
             img {
                 max-width: 100%;
-
+                object-position: center;
                 height: auto;
                 object-fit: cover;
             }
@@ -549,6 +553,7 @@
             top: 20vh;
             right: 0;
             display: block;
+
             img {
                 width: 100%;
                 height: auto;
@@ -679,18 +684,6 @@
         }
     }
 
-    /* data-scrolly
-                        data-scrolly-speed="0.1"
-                        data-start-position="350"
-                        data-direction="vertical"
-                        data-direction-y="bottom-to-top"*/
-
-    /*data-scrolly
-                        data-scrolly-speed="0.2"
-                        data-start-position="700"
-                        data-direction="vertical"
-                        data-direction-y="bottom-to-top"*/
-
     @media screen and (max-width: 860px) {
         .un-projet:nth-child(odd) .photos {
             left: 25%;
@@ -798,4 +791,27 @@
             top: 5%;
         }
     }
+}
+
+/*----------------------DECORATIONS PROJETS-----------------------------*/
+
+.gros_cercle_projet {
+    width: 13vw;
+    height: 13vw;
+    background-color: var(--color-primary);
+
+    border-radius: 100%;
+}
+
+.perso {
+    position: absolute;
+    z-index: -3;
+    bottom: 0;
+    left: 0;
+}
+
+.decorations_projet {
+    width: 100%;
+    height: 90%;
+    position: relative;
 }
