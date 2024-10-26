@@ -19,7 +19,7 @@
     <script src="scripts/main.js" defer></script>
 </head>
 
-<body data-component="Scrolly">
+<body data-component="Animations">
 
     <header class="header" data-component="Header" id="header">
 
@@ -188,24 +188,24 @@
         </div>
     </section>
 
-    <section class="titre_bkg">
+    <section class="titre_bkg" data-component="Scrolly">
         <div class="h1-bkg" data-scrolly data-scrolly-speed="0.6" data-start-position="400" data-direction="horizontal" data-max-position="500" data-min-position="0" data-direction-x="right-to-left">
             Enchantée
         </div>
     </section>
     <!--Section à propos-->
-    <section class="a_propos" id="apropos">
+    <section class="a_propos" data-component="Scrolly" id="apropos">
         <div class="wrapper">
             <!-----------------Ma description de moi + mon lien vidéo + mon petit lottie de flèche + les étoiles------------>
             <div class="description_lien_video">
                 <div class="titre_cercle">
-                    <h1>Plus sur moi</h1>
+                    <h1 data-animations="fromLeft">Plus sur moi</h1>
                     <div class="cercle" data-scrolly data-scrolly-speed="0.2" data-start-position="253" data-direction="vertical" data-max-position="500" data-min-position="0" data-direction-y="bottom-to-top">
                         <div class="forme_cercle"></div>
                     </div>
                 </div>
 
-                <p>
+                <p data-animations="fromRight">
                     Je suis étudiante passionnée par le design et l’intégration web . Mon objectif est de concevoir des
                     solutions à la fois belles et pratiques, qui répondent vraiment aux besoins des gens tout en exprimant
                     ma créativité. Je suis impatiente de participer à des projets inspirants et d'apprendre sans cesse dans
@@ -219,7 +219,7 @@
 
             <div class="lien_video">
                 <div class="video">
-                    <a href="https://youtu.be/nvZ8usdBw44">Voir ma vidéo de présentation</a>
+                    <a href="https://youtu.be/nvZ8usdBw44" data-animations="fromBottom">Voir ma vidéo de présentation</a>
 
                     <div class="groupes_etoiles" data-scrolly data-scrolly-speed="0.2" data-start-position="400" data-direction="vertical" data-max-position="500" data-min-position="0" data-direction-y="bottom-to-top">
                         <div class="etoile_petite">
@@ -241,7 +241,7 @@
             </div>
 
             <div class="aspects">
-                <div class="competences">
+                <div class="competences" data-animations="fromLeft">
                     <div class="titre">
                         <h2>Compétences</h2>
                         <div class="souligne_titre">
@@ -269,7 +269,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="qualites">
+                <div class="qualites" data-animations="fromRight">
                     <div class="titre">
                         <h2>Qualités</h2>
                         <div class="souligne_titre">
@@ -297,7 +297,7 @@
                     </ul>
                 </div>
 
-                <div class="langages">
+                <div class="langages" data-animations="fromLeft">
                     <div class="titre">
                         <h2>Langages</h2>
                         <div class="souligne_titre">
@@ -325,7 +325,7 @@
                     </ul>
                 </div>
 
-                <div class="loisirs">
+                <div class="loisirs" data-animations="fromRight">
                     <div class="titre">
                         <h2>Loisirs</h2>
                         <div class="souligne_titre">
@@ -380,7 +380,7 @@
         <lottie-player data-component="Lottie" id="monLottieApropos2" class="lottie_apropos2" style="width: 100%; height: 100%" src="assets/lottie/lottie_apropos2.json" data-scroll></lottie-player>
     </section>
 
-    <section class="projet-test">
+    <section class="projet-test" data-component="Scrolly">
         <div class="conteneur-titre">
             <div class="titre_section">
                 <h2 id="projets">Projets</h2>
@@ -452,12 +452,13 @@
                     </div>
 
                     <div class="liens" data-scrolly data-scrolly-speed="0.2" data-start-position="750" data-direction="vertical" data-direction-y="bottom-to-top">
-                        <div class="lien_details">
-                            <a href="https://www.behance.net/gallery/210655001/Muse-des-Arts?" target="_blank" class="btn_projet">Voir les détails</a>
-                        </div>
+                        <div class="lien_details btn_projets">
+                            <a href="https://www.behance.net/gallery/210655001/Muse-des-Arts?" target="_blank" class="btn_projet">Voir les détails
 
-                        <div class="lien_site">
-                            <a href="https://www.behance.net/gallery/210551423/Sauve-Marin" target="_blank" class="btn_projet">Voir le site</a>
+                                <svg class="icon icon--lg">
+                                    <use xlink:href="#icon-icon_fleche"></use>
+                                </svg>
+                            </a>
                         </div>
                     </div>
 
@@ -567,10 +568,10 @@
 
     <footer class="footer" id="contact">
         <div class="wrapper">
-            <h1>À bientôt?</h1>
+            <h1 data-animations="fromLeft">À bientôt?</h1>
 
             <nav class="nav_footer">
-                <ul>
+                <ul data-animations="fromBottom">
                     <li><a href="mailto:evep.delisle@gmail.com">evep.delisle@gmail.com</a></li>
                     <li><a href="tel:5147708307">(514)-770-8307</a></li>
                     <li><a href="" class="cv">Voir mon cv</a></li>
@@ -579,9 +580,9 @@
                 </ul>
             </nav>
 
-            <div class="divider"></div>
+            <div class="divider" data-animations="fromLeft"></div>
 
-            <div class="logo_reseaux">
+            <div class="logo_reseaux" data-animations="fromBottom">
 
                 <div class="reseaux_sociaux">
                     <a href="https://www.behance.net/evedelisle2" target="_blank">
@@ -602,7 +603,7 @@
                 </div>
 
 
-                <div class="logo">
+                <div class="logo" data-animations="fromBottom">
                     <a href="#header">
                         © Ève Delisle 2024
                     </a>

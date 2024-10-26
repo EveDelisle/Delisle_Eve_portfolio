@@ -1,0 +1,141 @@
+/*.btn_projets {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 5px 20px;
+    margin: 10px;
+    border: 1px solid black;
+    border-radius: 50px;
+    //  background-color: var(--color-text-bkg);
+
+    &:hover {
+    }
+}
+
+.btn_projets {
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.btn_projets::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    background-color: var(--color-text-bkg);
+    // transition: transform 0.3s ease;
+    transform: scale(1); //covers the entire button
+    transform-origin: center;
+    transition: transform 0.3s ease;
+}
+
+.btn_projets:hover::before {
+    /*   transform: scale(0.97, 0.97);
+
+    border-radius: 100%;
+    transform: matrix(0.4, 0, 0, 0.8, 15, 0);
+    // transform: matrix(0.9, 0, 0, 0.9, 10, 0);
+    /* transform: matrix(
+        0.9,
+        0,
+        0,
+        0.9,
+        10,
+        20
+    ); /* Scales down by 10% and translates */
+
+/* transform: scale(0.9); /* Shrinks to 90% */
+/* border-radius: 50%; /* Ensures it stays circular */
+/*}*/
+
+@keyframes bounceOut {
+    0% {
+        transform: scaleX(1);
+    }
+    60% {
+        transform: scaleX(0.6);
+    }
+    80% {
+        transform: scaleX(0.7);
+    }
+    100% {
+        transform: scaleX(0.5); /* Ends by covering the right half */
+    }
+}
+
+.btn_projets {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 20px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+
+    background-color: var(--color-text-bkg);
+
+    &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: block;
+        width: 100%;
+        background-color: var(--color-text-bkg); /* Adjust to desired color */
+        z-index: -1;
+        transform: scale(1); /* Full size initially */
+        transform-origin: right;
+        transition: all 0.8s ease;
+    }
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: block;
+        width: 100%;
+        background-color: var(--color-text-bkg); /* Adjust to desired color */
+        z-index: -2;
+        transform: scale(1); /* Full size initially */
+        transform-origin: right;
+        transition: all 0.8s ease;
+    }
+
+    &:hover {
+        &:before {
+            width: 56px;
+            height: 56px;
+            border-radius: 28px;
+            background-color: var(--color-text-bkg);
+        }
+
+        svg {
+            transform: translateX(0);
+        }
+
+        &:active {
+            transform: scale(0.96);
+        }
+    }
+}
+
+/*.btn_projets:hover::before {
+    transform: scale(0.9); /* Shrink background slightly */
+// transform: scaleX(0.3);
+//  border-radius: 100px; /* Maintain rounded corners */
+/*}*/
+
+.btn_projets svg {
+    position: relative;
+    top: 0;
+    margin-left: 10px;
+
+    transform: translateX(-5px);
+    transition: all 0.3s ease;
+}

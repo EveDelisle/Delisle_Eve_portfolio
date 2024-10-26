@@ -1,9 +1,9 @@
 /* ==========================================================================
-   scrolly / component
+   animations / component
    ========================================================================== */
 
 .has-js {
-    [data-scrolly='fromBottom'] {
+    [data-animations='fromBottom'] {
         //déclarations pour cacher l"élément
         opacity: 0;
         transform: translateY(60px);
@@ -17,7 +17,7 @@
         }
     }
 
-    [data-scrolly='fromLeft'] {
+    [data-animations='fromLeft'] {
         //déclarations pour cacher l"élément
         opacity: 0;
         transform: translateX(-60px);
@@ -31,7 +31,7 @@
         }
     }
 
-    [data-scrolly='fromTop'] {
+    [data-animations='fromTop'] {
         //déclarations pour cacher l"élément
         opacity: 0;
         transform: translateY(-60px);
@@ -45,7 +45,7 @@
         }
     }
 
-    [data-scrolly='fromRight'] {
+    [data-animations='fromRight'] {
         //déclarations pour cacher l"élément
         opacity: 0;
         transform: translateX(60px);
@@ -56,20 +56,6 @@
 
             opacity: 1;
             transform: translateX(0);
-        }
-    }
-
-    [data-scrolly='zoomOut'] {
-        //déclarations pour cacher l"élément
-        opacity: 0;
-        transform: scale(4);
-        transition: all 0.6s ease-out;
-
-        &.is-active {
-            //on change ce qu'il faut pour l'afficher
-
-            opacity: 1;
-            transform: scale(1);
         }
     }
 }

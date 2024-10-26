@@ -3,6 +3,7 @@ import Header from './components/Header';
 import Lottie from './components/Lottie';
 import Scrolly from './components/Scrolly';
 import Horizontalscroll from './components/Horizontalscroll';
+import Animations from './components/Animations';
 import Absolute from './components/Absolute';
 
 export default class ComponentFactory {
@@ -14,6 +15,7 @@ export default class ComponentFactory {
       Lottie,
       Scrolly,
       Horizontalscroll,
+      Animations,
       Absolute,
     };
     this.init();
