@@ -42,12 +42,13 @@
     width: 2.5em;
 }
 
+.icon--xxl {
+    height: 25em;
+    width: 25em;
+}
+
 .header .icon {
     width: 45px;
     height: 45px;
     fill: var(--color-icons);
-}
-
-.footer .icon {
-    // fill: var(--color-white);
 }
