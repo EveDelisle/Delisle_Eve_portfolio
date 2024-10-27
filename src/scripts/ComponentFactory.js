@@ -2,9 +2,10 @@ import Carousel from './components/Carousel';
 import Header from './components/Header';
 import Lottie from './components/Lottie';
 import Scrolly from './components/Scrolly';
-import Horizontalscroll from './components/Horizontalscroll';
+
 import Animations from './components/Animations';
-import Absolute from './components/Absolute';
+
+import Lenis from './components/Lenis';
 
 export default class ComponentFactory {
   constructor() {
@@ -14,9 +15,9 @@ export default class ComponentFactory {
       Header,
       Lottie,
       Scrolly,
-      Horizontalscroll,
+
       Animations,
-      Absolute,
+      Lenis,
     };
     this.init();
   }
