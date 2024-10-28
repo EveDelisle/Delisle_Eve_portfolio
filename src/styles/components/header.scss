@@ -240,6 +240,7 @@
     display: none;
     cursor: pointer;
     position: relative;
+    z-index: 15;
     background-color: transparent;
     border: none;
 
@@ -324,6 +325,7 @@ span {
     @media screen and (max-width: 1024px) {
         background-color: var(--color-white);
         position: fixed;
+        z-index: 10;
         top: 0;
         left: 0;
         height: 100vh;

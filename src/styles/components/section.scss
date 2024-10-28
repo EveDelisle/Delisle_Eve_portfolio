@@ -21,10 +21,10 @@
     }
 
     .h1-bkg {
-        color: transparent; /* No fill color */
-        -webkit-text-stroke: 2px #000000; /* White stroke of 2px width */
+        /* color: transparent; /* No fill color */
+        /* -webkit-text-stroke: 2px #000000; /* White stroke of 2px width */
         text-wrap: nowrap;
-
+        color: var(--color-text-bkg);
         position: absolute;
         top: -40%;
     }
