@@ -36,7 +36,7 @@
         justify-content: space-between;
         align-items: center;
         padding: 30px 0;
-        @media screen and (max-width: 1366px) {
+        @media screen and (max-width: 1368px) {
             padding: 30px 0;
         }
     }
@@ -52,7 +52,7 @@
         left: 20%;
         background-color: var(--color-primary);
 
-        @media screen and (max-width: 1366px) {
+        @media screen and (max-width: 1368px) {
             display: none;
         }
     }
@@ -67,7 +67,7 @@
         right: 20%;
         background-color: var(--color-primary);
 
-        @media screen and (max-width: 1366px) {
+        @media screen and (max-width: 1368px) {
             display: none;
         }
     }
@@ -102,7 +102,7 @@
     }
 
     .reseaux_sociaux a {
-        @media screen and (max-width: 1366px) {
+        @media screen and (max-width: 1368px) {
             display: none;
         }
     }
@@ -155,7 +155,7 @@
             margin: 10px;
         }
 
-        @media screen and (max-width: 1366px) {
+        @media screen and (max-width: 1368px) {
             .nav-is-active & {
                 display: grid;
 
@@ -188,7 +188,7 @@
 
     z-index: 21;
 
-    @media screen and (max-width: 1366px) {
+    @media screen and (max-width: 1368px) {
         display: flex;
     }
 
@@ -227,7 +227,7 @@ span {
         width: calc(var(--bar-width) / 1.2);
     }
 
-    @media screen and (min-width: 1366px) {
+    @media screen and (min-width: 1368px) {
         display: none;
     }
 }
@@ -259,7 +259,7 @@ span {
    ========================================================================== */
 
 .nav {
-    @media screen and (max-width: 1367px) {
+    @media screen and (max-width: 1368px) {
         background-color: var(--color-white);
         position: fixed;
         z-index: 30;
@@ -282,7 +282,7 @@ span {
     }
 
     ul {
-        @media screen and (max-width: 1366px) {
+        @media screen and (max-width: 1368px) {
             transition: transform 1.2s ease-out;
             display: grid;
             gap: 40px;
@@ -292,7 +292,7 @@ span {
             width: 100%;
         }
 
-        @media screen and (max-width: 1366px) {
+        @media screen and (max-width: 1368px) {
             display: grid;
 
             .nav-is-active & {
@@ -308,7 +308,7 @@ span {
         }
     }
 
-    @media screen and (min-width: 1366px) {
+    @media screen and (min-width: 1368px) {
         display: block;
 
         background: unset;
@@ -331,7 +331,7 @@ span {
         color: inherit;
     }
 
-    @media screen and (min-width: 1366px) {
+    @media screen and (min-width: 1368px) {
         color: var(--color-black);
         position: relative;
         text-transform: none;

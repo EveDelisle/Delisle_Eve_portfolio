@@ -458,8 +458,10 @@
         height: 100vh;
         display: grid;
         gap: 600px;
+        padding: 0 28px;
 
         @media screen and (max-width: 500px) {
+            gap: 500px;
         }
     }
 
@@ -632,6 +634,10 @@
     .liens {
         position: absolute;
         bottom: 0vh;
+        right: 0%;
+    }
+
+    .un-projet:nth-child(odd) .liens {
         right: -3%;
     }
 
