@@ -3,41 +3,30 @@
 
     .logo {
         color: var(--color-secondaire-typo);
+
         a {
             position: relative;
         }
-        a::after {
-            content: '';
-            position: absolute;
-            width: 2px;
-            height: 2px; /* Border thickness */
-            background: var(--color-tertiaire); /* Border color */
-            bottom: 20%;
-            left: 0;
-            transform: translateY(100%) scaleY(0);
-            transition: transform 0.4s ease; /* Animation timing */
-        }
-
-        a:hover::after {
-            transform: translateY(0) scaleY(10);
-        }
-
         a::before {
             content: '';
             position: absolute;
-            z-index: -1;
-
-            width: 100%;
-            height: 50%;
-            background-color: var(--color-tertiaire);
-            bottom: 0px;
+            bottom: 0;
             left: 0;
-            transform: translateX(-50%) scaleX(0);
-            transition: transform 0.4s ease 0.2s; /* Animation timing */
+            height: 2px;
+            width: 100%;
+            background-color: var(--color-tertiaire);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
         }
 
         a:hover::before {
-            transform: translateX(0) scaleX(1);
+            transform: scaleX(1);
+        }
+
+        a:not(:hover)::before {
+            transform-origin: right;
+            transition: transform 0.4s ease;
         }
     }
 
@@ -153,58 +142,6 @@
             padding: 0px 15px;
             overflow: hidden;
         }
-        /*-----------------------------------------------------------------*/
-        /*---------BACKGROUND HOVER li------------------------*/
-        li a::after {
-            content: '';
-            position: absolute;
-            width: 2px;
-            height: 2px; /* Border thickness */
-            background: var(--color-tertiaire); /* Border color */
-
-            bottom: 0;
-            left: 0;
-            transform: translateY(100%) scaleY(0);
-            transition: transform 0.4s ease; /* Animation timing */
-        }
-
-        li a:hover::after {
-            transform: translateY(0) scaleY(23);
-
-            @media screen and (max-width: 1024px) {
-                transform: translateY(0) scaleY(19);
-            }
-
-            @media screen and (max-width: 820px) {
-                transform: translateY(0) scaleY(17);
-            }
-
-            @media screen and (max-width: 633px) {
-                transform: translateY(0) scaleY(16);
-            }
-
-            @media screen and (max-width: 500px) {
-                transform: translateY(0) scaleY(15);
-            }
-        }
-
-        li a::before {
-            content: '';
-            position: absolute;
-            z-index: -1;
-            // display: block;
-            width: 100%;
-            height: 50%;
-            background-color: var(--color-tertiaire);
-            bottom: 0px;
-            right: 0;
-            transform: translateX(-100%) scaleX(0);
-            transition: transform 0.4s ease 0.2s; /* Animation timing */
-        }
-
-        li a:hover::before {
-            transform: translateX(0) scaleX(1);
-        }
     }
 
     /*-----------RESEAUX QUAND NAV IS ACTIVE----------------*/
@@ -212,7 +149,7 @@
     .reseaux_hamburger {
         display: none;
         position: absolute;
-        right: 15%;
+        right: 10%;
 
         svg {
             margin: 10px;
@@ -325,7 +262,7 @@ span {
     @media screen and (max-width: 1024px) {
         background-color: var(--color-white);
         position: fixed;
-        z-index: 10;
+        z-index: 30;
         top: 0;
         left: 0;
         height: 100vh;

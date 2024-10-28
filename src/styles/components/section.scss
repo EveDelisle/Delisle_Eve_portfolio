@@ -21,10 +21,10 @@
     }
 
     .h1-bkg {
-        /* color: transparent; /* No fill color */
-        /* -webkit-text-stroke: 2px #000000; /* White stroke of 2px width */
+        color: transparent; /* No fill color */
+        -webkit-text-stroke: 2px #000000; /* White stroke of 2px width */
         text-wrap: nowrap;
-        color: var(--color-text-bkg);
+        /* color: var(--color-text-bkg);*/
         position: absolute;
         top: -40%;
     }
@@ -37,6 +37,8 @@
     background-color: var(--color-primary);
     padding: 102px 0 133px 0;
     z-index: 25;
+
+    overflow: hidden;
 
     color: var(--color-white);
 
@@ -147,14 +149,14 @@
             position: absolute;
             width: 100%;
             height: 100%;
-            border-top: 1px solid transparent;
-            border-left: 1px solid transparent;
+            border-top: 1px solid var(--color-white);
+            border-left: 1px solid var(--color-white);
 
             top: 0;
             left: 0;
             box-sizing: border-box;
 
-            transform: scale(0);
+            transform: scale(0.3);
             transform-origin: top left;
 
             transition: transform 0.6s ease, border-color 0.6s ease; /* Animation timing */
@@ -172,14 +174,14 @@
             position: absolute;
             width: 100%;
             height: 100%;
-            border-bottom: 1px solid transparent;
-            border-right: 1px solid transparent;
+            border-bottom: 1px solid var(--color-white);
+            border-right: 1px solid var(--color-white);
 
             top: 0;
             left: 0;
             box-sizing: border-box;
 
-            transform: scale(0);
+            transform: scale(0.3);
             transform-origin: bottom right;
 
             transition: transform 0.6s ease, border-color 0.6s ease; /* Animation timing */
@@ -413,6 +415,7 @@
     height: 5300px;
     position: relative;
     padding: 150px 0;
+    color: var(--color-secondaire-typo);
 
     @media screen and (max-width: 940px) {
         max-height: 4800px;
