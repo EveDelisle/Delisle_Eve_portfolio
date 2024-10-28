@@ -84,7 +84,10 @@
             border-right-color: var(--color-white);
         }
     }
-
+    .credits {
+        display: flex;
+        align-items: center;
+    }
     nav {
         margin-top: 80px;
         margin-bottom: 57px;
