@@ -11,3 +11,10 @@ p {
     font-weight: 300;
     color: var(--color-black);
 }
+
+.p-big {
+    font-size: var(--font-size-big-p);
+    font-weight: 400;
+    font-family: var(--font-secondary);
+    color: var(--color-secondaire-typo);
+}

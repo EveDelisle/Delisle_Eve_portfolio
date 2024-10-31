@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr" class="lenis" data-scroll-orientation="vertical">
+<html lang="fr" class="lenis-smooth" data-scroll-orientation="vertical">
 
 <head>
     <meta charset="utf-8" />
@@ -26,9 +26,9 @@
     <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
 </head>
 
-<body data-component="Animations">
+<body>
 
-    <!--<div></div>-->
+
     <header class="header" data-component="Header" id="header">
 
         <div class="wrapper">
@@ -52,17 +52,17 @@
                 </ul>
 
                 <div class="reseaux_hamburger">
-                    <a href="https://www.behance.net/evedelisle2" target="_blank">
+                    <a href="https://www.behance.net/evedelisle2" target="_blank" aria-label="Lien vers la page behance de Eve Delisle">
                         <svg class="icon icon--lg behance">
                             <use xlink:href="#icon-icon_behance"></use>
                         </svg>
                     </a>
-                    <a href="https://www.linkedin.com/in/eve-delisle-b1589232a/" target="_blank">
+                    <a href="https://www.linkedin.com/in/eve-delisle-b1589232a/" target="_blank" aria-label="Lien vers la page linkedin de Eve Delisle">
                         <svg class="icon icon--lg linkedin">
                             <use xlink:href="#icon-icon_linkedin"></use>
                         </svg>
                     </a>
-                    <a href="https://www.instagram.com/evedelisle_/" target="_blank">
+                    <a href="https://www.instagram.com/evedelisle_/" target="_blank" aria-label="Lien vers la page Instagram de Eve Delisle">
                         <svg class="icon icon--lg instagram">
                             <use xlink:href="#icon-icon_instagram"></use>
                         </svg>
@@ -120,7 +120,7 @@
                 </div>
 
                 <div class="hero_media">
-                    <img src="assets/images/img_eve.png" alt="photo de Eve Delisle" />
+                    <img src="assets/images/photo_eve.webp" alt="photo de Eve Delisle" />
                     <div class="etoile_top">
                         <svg class="border_etoile" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27 27" fill="none">
                             <path d="M9.64407 11.0334C7.40678 12.7726 2.94915 13.3746 1 13.4582C3.31638 13.709 8.42373 14.6789 10.322 16.5518C12.2203 18.4247 13.3164 23.631 13.6271 26C13.8814 24.913 14.5593 17.7224 17.2712 15.8829C19.4407 14.4114 23.9944 13.6533 26 13.4582C20.9153 12.8729 18.2034 11.7023 17.2712 11.0334C15.273 9.59966 13.8814 3.87068 13.6271 1C13.2881 4.01003 12.4407 8.85953 9.64407 11.0334Z" fill="black" stroke="white" />
@@ -161,7 +161,7 @@
 
                 <div class="texte_droit">
                     <h1>Ève Delisle</h1>
-                    <h3>Designer web junior</h3>
+                    <p class="big-p">Designer web junior</p>
                 </div>
             </div>
 
@@ -205,7 +205,7 @@
     <section class="a_propos" data-component="Scrolly" id="apropos">
         <div class="wrapper">
             <!-----------------Ma description de moi + mon lien vidéo + mon petit lottie de flèche + les étoiles------------>
-            <div class="description_lien_video">
+            <div class="description_lien_video" data-component="Animations">
                 <div class="titre_cercle">
                     <h1 data-animations="fromLeft">Plus sur moi</h1>
                     <div class="cercle" data-scrolly data-scrolly-speed="0.2" data-start-position="253" data-direction="vertical" data-max-position="500" data-min-position="0" data-direction-y="bottom-to-top">
@@ -225,7 +225,7 @@
                 <lottie-player data-component="Lottie" id="monLottieFlecheVideo" class="lottie_fleche_video" style="width: 100%; height: 100%" src="assets/lottie/fleche_video.json" data-scroll></lottie-player>
             </div>
 
-            <div class="lien_video">
+            <div class="lien_video" data-component="Animations">
                 <div class="video">
                     <a href="https://youtu.be/pKNH8oRkS0Q" target="_blank" data-animations="fromBottom">Voir ma vidéo de présentation</a>
 
@@ -248,7 +248,7 @@
                 </div>
             </div>
 
-            <div class="aspects">
+            <div class="aspects" data-component="Animations">
                 <div class="competences" data-animations="fromLeft">
                     <div class="titre">
                         <h2>Compétences</h2>
@@ -408,7 +408,7 @@
             <div class="un-projet projet-baie">
                 <div class="projet-container">
                     <div class="photos" data-scrolly data-scrolly-speed="0.1" data-start-position="400" data-direction="vertical" data-direction-y="bottom-to-top">
-                        <img class="gauche image-mockup" src="assets/images/mockup_baie.png" alt="phone à gauche" />
+                        <img class="gauche image-mockup" src="assets/images/mockup_baie.webp" alt="phone à gauche" />
                     </div>
 
                     <div class="text-container">
@@ -466,7 +466,7 @@
             <div class="un-projet projet-personnel">
                 <div class="projet-container">
                     <div class="photos" data-scrolly data-scrolly-speed="0.1" data-start-position="380" data-direction="vertical" data-direction-y="bottom-to-top">
-                        <img class="droite image-mockup" src="assets/images/mockup_perso.png" alt="projet personnel" />
+                        <img class="droite image-mockup" src="assets/images/mockup_perso.webp" alt="projet personnel" />
                     </div>
 
                     <div class="text-container">
@@ -513,7 +513,7 @@
             <div class="un-projet projet-gelato">
                 <div class="projet-container">
                     <div class="photos" data-scrolly data-scrolly-speed="0.1" data-start-position="550" data-direction="vertical" data-direction-y="bottom-to-top">
-                        <img class="gauche image-mockup" src="assets/images/mockup_gelato.png" alt="phone à gauche" />
+                        <img class="gauche image-mockup" src="assets/images/mockup_gelato.webp" alt="phone à gauche" />
                     </div>
 
                     <div class="text-container">
@@ -560,8 +560,8 @@
             <div class="un-projet projet-sauvemarin">
                 <div class="projet-container">
                     <div class="photos">
-                        <img class="gauche image-mockup" src="assets/images/phone_gauche.png" alt="phone à gauche" data-scrolly data-scrolly-speed="0.1" data-start-position="560" data-direction="vertical" data-direction-y="bottom-to-top" />
-                        <img class="droite image-mockup" src="assets/images/phone_droite.png" alt="phone à droite" data-scrolly data-scrolly-speed="0.2" data-start-position="1100" data-direction="vertical" data-direction-y="bottom-to-top" />
+                        <img class="gauche image-mockup" src="assets/images/phone_gauche.webp" alt="phone à gauche" data-scrolly data-scrolly-speed="0.1" data-start-position="560" data-direction="vertical" data-direction-y="bottom-to-top" />
+                        <img class="droite image-mockup" src="assets/images/phone_droite.webp" alt="phone à droite" data-scrolly data-scrolly-speed="0.2" data-start-position="1100" data-direction="vertical" data-direction-y="bottom-to-top" />
                     </div>
 
                     <div class="text-container">
@@ -608,7 +608,7 @@
             <div class="un-projet projet-buzz">
                 <div class="projet-container">
                     <div class="photos" data-scrolly data-scrolly-speed="0.1" data-start-position="700" data-direction="vertical" data-direction-y="bottom-to-top">
-                        <img class="gauche image-mockup" src="assets/images/mockup_buzz.png" alt="tablet" />
+                        <img class="gauche image-mockup" src="assets/images/mockup_buzz.webp" alt="tablet" />
                     </div>
 
                     <div class="text-container">
@@ -655,7 +655,7 @@
     </section>
 
 
-    <footer class="footer" id="contact">
+    <footer class="footer" id="contact" data-component="Animations">
         <div class="wrapper">
 
             <div class="titre_footer">

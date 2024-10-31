@@ -32,8 +32,6 @@
 // Composants d'interface utilisateur spécifiques.
 // C’est là que la majorité de notre travail a lieu.
 
-@import '../../node_modules/swiper/swiper-bundle';
-
 @import 'components/header';
 @import 'components/icons';
 @import 'components/hero';
@@ -41,7 +39,7 @@
 @import 'components/lottie';
 @import 'components/formes';
 @import 'components/footer';
-@import 'components/carousel';
+
 @import 'components/animations';
 @import 'components/lenis';
 @import 'components/buttons';
