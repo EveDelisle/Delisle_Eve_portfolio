@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="fr" class="lenis-smooth" data-scroll-orientation="vertical">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ève Delisle</title>
+
+    <link rel="stylesheet" href="styles/main.css" />
+
+    <script>
+        // À décommenter lorsque rendu dans le fichier .php pour que les icônes fonctionnent dans WP
+        // iconsPath = '<?php bloginfo('template_url') ?>/dist/';
+    </script>
+
+    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module">
+    </script>
+
+    <script src="scripts/main.js" defer></script>
+    <!-- <script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>-->
+
+
+
+    <link rel="icon" href="assets/icons/icon_tab.svg" type="image/x-icon">
+    <link rel="icon" href="assets/images/icon_tab.png" type="image/png">
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+</head>
+
+<body>
+
+
+    <header class="header" data-component="Header" id="header">
+
+        <div class="wrapper">
+
+            <div class="logo">
+                <a href="index.html">
+                    Ève Delisle
+                </a>
+            </div>
+
+            <nav class="nav">
+                <ul class="nav__menu">
+
+                    <li><a href="#apropos" class="nav_item js-nav-link">À propos </a>
+
+                    </li>
+                    <li><a href="#projets" class="nav_item js-nav-link">Mes projets</a>
+                    </li>
+                    <li><a href="#contact" class="nav_item js-nav-link">Contact</a></li>
+
+                </ul>
+
+                <div class="reseaux_hamburger">
+                    <a href="https://www.behance.net/evedelisle2" target="_blank" aria-label="Lien vers la page behance de Eve Delisle">
+                        <svg class="icon icon--lg behance">
+                            <use xlink:href="#icon-icon_behance"></use>
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/eve-delisle-b1589232a/" target="_blank" aria-label="Lien vers la page linkedin de Eve Delisle">
+                        <svg class="icon icon--lg linkedin">
+                            <use xlink:href="#icon-icon_linkedin"></use>
+                        </svg>
+                    </a>
+                    <a href="https://www.instagram.com/evedelisle_/" target="_blank" aria-label="Lien vers la page Instagram de Eve Delisle">
+                        <svg class="icon icon--lg instagram">
+                            <use xlink:href="#icon-icon_instagram"></use>
+                        </svg>
+                    </a>
+                </div>
+            </nav>
+
+
+            <div class="reseaux_sociaux">
+                <a href="https://www.behance.net/evedelisle2" target="_blank">
+                    <svg class="icon icon--lg behance">
+                        <use xlink:href="#icon-icon_behance"></use>
+                    </svg>
+                </a>
+                <a href="https://www.linkedin.com/in/eve-delisle-b1589232a/" target="_blank">
+                    <svg class="icon icon--lg linkedin">
+                        <use xlink:href="#icon-icon_linkedin"></use>
+                    </svg>
+                </a>
+                <a href="https://www.instagram.com/evedelisle_/" target="_blank">
+                    <svg class="icon icon--lg instagram">
+                        <use xlink:href="#icon-icon_instagram"></use>
+                    </svg>
+                </a>
+            </div>
+
+
+
+
+            <div class="header_toggle js-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+
+    </header>
+
+    <section class="formulaire">
+        <div class="wrapper">
+            <div class="titre_section">
+                <h1 id="projets">À bientôt?</h1>
+                <div class="ligne_etoile">
+                    <div class="ligne"></div>
+                    <div class="etoile">
+                        <div class="etoile_petite">
+                            <svg class="etoile" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 27 27" fill="none">
+                                <path d="M9.64407 11.0334C7.40678 12.7726 2.94915 13.3746 1 13.4582C3.31638 13.709 8.42373 14.6789 10.322 16.5518C12.2203 18.4247 13.3164 23.631 13.6271 26C13.8814 24.913 14.5593 17.7224 17.2712 15.8829C19.4407 14.4114 23.9944 13.6533 26 13.4582C20.9153 12.8729 18.2034 11.7023 17.2712 11.0334C15.273 9.59966 13.8814 3.87068 13.6271 1C13.2881 4.01003 12.4407 8.85953 9.64407 11.0334Z" fill="#5f7a69" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <form action="" class="form" autocomplete="off" data-component="Form">
+                <h2 data-scrolly="fromLeft">Bonjour,</h2>
+                <fieldset>
+                    <div class="champs_nom">
+                        <div class="input">
+                            <label class="input__label" for="first_name" data-scrolly="fromLeft">
+                                <h2>mon nom est</h2>
+                            </label>
+                            <input class="input__element" type="text" name="full_name" id="full_name" placeholder="Entrez votre nom" required data-scrolly="fromLeft" />
+
+                            <label class="input__label" for="first_name" data-scrolly="fromLeft">
+                                <h2>,</h2>
+                            </label>
+
+                            <span class="error-message">Ce champs est invalide</span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="champs_courriel">
+                        <div class="input">
+                            <label class="input__label" for="email" data-scrolly="fromLeft">
+                                <h2>voici mon courriel</h2>
+                            </label>
+                            <input class="input__element" type="email" name="email" id="email" placeholder="Entrez votre courriel" required data-scrolly="fromLeft" />
+
+                            <label class="input__label" for="first_name" data-scrolly="fromLeft">
+                                <h2>&</h2>
+                            </label>
+
+                            <span class="error-message">Ce champs est invalide</span>
+                        </div>
+
+                    </div>
+
+                    <div class="input textarea u-grid-fullwidth">
+                        <label class="input__label" for="comment" data-scrolly="fromLeft">
+                            <h2>laissez-moi un message</h2>
+                        </label>
+                        <textarea maxlength="500" class="input__element" name="comment" id="comment" placeholder="Écrivez votre texte ici" required data-scrolly="fromBottom"></textarea>
+                        <span class="error-message">Ce champs est invalide</span>
+                    </div>
+                </fieldset>
+        </div>
+
+        <footer class="form__footer">
+            <button class="btn soumettre" data-scrolly="fromLeft">Soumettre</button>
+        </footer>
+
+        <div class="form__confirmation">
+            <h5>Merci</h5>
+            <p>Votre formulaire a bien été envoyé.</p>
+        </div>
+        </form>
+        </div>
+    </section>
+
+
+    <footer class="footer" id="contact" data-component="Animations">
+        <div class="wrapper">
+
+            <div class="titre_footer">
+                <h1 data-animations="fromLeft">À bientôt?</h1>
+                <svg class="icon icon--lg icon--stroke">
+                    <use xlink:href="#icon-icon_etoile_footer"></use>
+                </svg>
+            </div>
+
+            <nav class="nav_footer">
+                <ul data-animations="fromBottom">
+                    <li><a href="mailto:evep.delisle@gmail.com">evep.delisle@gmail.com</a></li>
+                    <li><a href="tel:5147708307">(514)-770-8307</a></li>
+                    <li><a href="assets/pdf/curriculum-vitae.pdf" target="_blank" class="cv">Voir mon CV</a></li>
+                    <li><a href="#apropos">À propos</a></li>
+                    <li><a href="#projets">Mes projets</a></li>
+                </ul>
+            </nav>
+
+            <div class="divider" data-animations="fromLeft"></div>
+
+            <div class="logo_reseaux" data-animations="fromBottom">
+
+                <div class="reseaux_sociaux">
+                    <a href="https://www.behance.net/evedelisle2" target="_blank">
+                        <svg class="icon icon--lg behance">
+                            <use xlink:href="#icon-icon_behance"></use>
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/eve-delisle-b1589232a/" target="_blank">
+                        <svg class="icon icon--lg linkedin">
+                            <use xlink:href="#icon-icon_linkedin"></use>
+                        </svg>
+                    </a>
+                    <a href="https://www.instagram.com/evedelisle_/" target="_blank">
+                        <svg class="icon icon--lg instagram">
+                            <use xlink:href="#icon-icon_instagram"></use>
+                        </svg>
+                    </a>
+                </div>
+
+
+                <div class="logo" data-animations="fromBottom">
+
+                    <div class="credits">
+
+                        <svg class="icon icon--lg ">
+                            <use xlink:href="#icon-icon_etoile_footer"></use>
+                        </svg>
+                        <a href="#header">
+                            © Ève Delisle 2024
+                        </a>
+
+                        <svg class="icon icon--lg ">
+                            <use xlink:href="#icon-icon_etoile_footer"></use>
+                        </svg>
+
+                    </div>
+
+                    <div class="fleche_retour">
+
+                        <svg class="icon icon--xl icon--stroke">
+                            <use xlink:href="#icon-icon_retour"></use>
+                        </svg>
+
+                        <p class="p-small">Retour !</p>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+
+
+
+
+        </div>
+
+
+        <!------------------DECORATIONS LOTTIE------------------>
+        <lottie-player data-component="Lottie" id="monLottieFooter" class="lottie_footer" style="width: 100%; height: 100%" src="assets/lottie/lottie_footer.json" data-scroll></lottie-player>
+    </footer>
+
+
+</body>
+
+</html>

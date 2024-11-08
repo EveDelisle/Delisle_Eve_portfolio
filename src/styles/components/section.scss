@@ -442,6 +442,10 @@
         max-height: 3300px;
     }
 
+    @media screen and (max-width: 973px) {
+        max-height: 4600px;
+    }
+
     @media screen and (max-width: 500px) {
         max-height: 4250px;
     }

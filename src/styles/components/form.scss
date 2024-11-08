@@ -1,0 +1,281 @@
+.form {
+    --color-focus: #cad3e7;
+    --color-bg-form: #e8f0fe;
+    --color-placeholder: #6c6666;
+    --spacing-field: 63px;
+
+    margin: 40px 0 0 86px;
+
+    @media screen and (max-width: 1212px) {
+        margin-top: 100px;
+    }
+
+    @media screen and (max-width: 920px) {
+        margin-top: 60px;
+    }
+
+    @media screen and (max-width: 520px) {
+        margin-top: 90px;
+    }
+
+    fieldset {
+        border: none;
+        padding: 0;
+    }
+
+    .grid {
+        display: grid;
+        gap: var(--spacing-md);
+        grid-template-columns: 1fr;
+
+        @media screen and (min-width: $breakpoint-md) {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    .champs_nom {
+        /* display: flex;
+        gap: var(--spacing-field);*/
+
+        .input {
+            display: flex;
+        }
+
+        @media screen and (max-width: 573px) {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 25px;
+        }
+
+        .input__element {
+            padding-left: 0;
+        }
+    }
+
+    .champs_rejoindre {
+        display: flex;
+        gap: var(--spacing-field);
+        margin-top: var(--spacing-field);
+
+        @media screen and (max-width: 573px) {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 25px;
+        }
+    }
+
+    .input__label {
+        font-family: var(--font-secondary);
+        font-size: var(--font-size-h5);
+        font-weight: 300;
+        display: block;
+        margin-bottom: 8px;
+    }
+
+    .input__element {
+        outline: none;
+        border-top: none;
+        border-right: none;
+        border-left: none;
+        border-bottom: 1px solid black;
+        width: 450px;
+
+        font-family: var(--font-secondary);
+        font-size: var(--font-size-p);
+        font-weight: 300;
+        padding: 10px;
+
+        cursor: pointer;
+        background-color: transparent;
+
+        &:-webkit-autofill,
+        &:-webkit-autofill-active {
+            -webkit-text-fill-color: inherit !important;
+            background-color: white;
+        }
+
+        //hover
+        &:hover,
+        + .input__label:hover::before {
+            background-color: var(--color-bg-form);
+        }
+
+        //focus //quand selectionner
+        &:focus,
+        &:-webkit-autofill:focus,
+        &:focus + .input__label::before {
+            background-color: var(--color-focus);
+            border-bottom: 1px solid var(--color-tertiary);
+        }
+
+        //autocomplete
+        &::placeholder {
+            color: var(--color-placeholder);
+        }
+
+        @media screen and (max-width: 1110px) {
+            width: 400px;
+        }
+
+        @media screen and (max-width: 1045px) {
+            width: 350px;
+        }
+
+        @media screen and (max-width: 920px) {
+            width: 300px;
+        }
+
+        @media screen and (max-width: 805px) {
+            width: 275px;
+        }
+
+        @media screen and (max-width: 768px) {
+            width: 238px;
+        }
+
+        @media screen and (max-width: 720px) {
+            width: 200px;
+        }
+
+        @media screen and (max-width: 593px) {
+            width: 190px;
+        }
+
+        @media screen and (max-width: 520px) {
+            width: 262px;
+        }
+    }
+}
+
+/*
+   TEXTAREA
+   ========================================================================== */
+.textarea {
+    margin-top: 39px;
+    .input__element {
+        resize: vertical;
+        width: 962px;
+        height: 222px;
+        background-color: var(--color-white);
+
+        @media screen and (max-width: 1110px) {
+            width: 850px;
+        }
+
+        @media screen and (max-width: 1045px) {
+            width: 700px;
+        }
+
+        @media screen and (max-width: 1045px) {
+            width: 700px;
+        }
+
+        @media screen and (max-width: 835px) {
+            width: 600px;
+        }
+
+        @media screen and (max-width: 768px) {
+            width: 500px;
+            height: 200px;
+        }
+
+        @media screen and (max-width: 625px) {
+            width: 400px;
+            height: 150px;
+        }
+
+        @media screen and (max-width: 520px) {
+            width: 275px;
+            height: 100px;
+        }
+    }
+}
+
+/*
+   FORM FOOTER
+   ========================================================================== */
+
+.form__footer {
+    margin-top: 57px;
+    .btn {
+        padding: 10px 73px;
+
+        cursor: pointer;
+    }
+}
+
+.infos_personnelles,
+.requete_citoyenne,
+.soumettre {
+    .is-sent & {
+        display: none;
+    }
+}
+
+/*
+   MESSAGE DE CONFIRMATION
+   ========================================================================== */
+.form__confirmation {
+    display: none;
+    h5 {
+        margin-bottom: 8px;
+    }
+    p {
+        color: var(--color-black);
+        margin-top: 0;
+    }
+    .is-sent & {
+        display: block;
+    }
+}
+
+/*
+   Error
+   ========================================================================== */
+.error {
+    .input__element,
+    &.check .input__label::before,
+    &.radio .input__label::before,
+    .check .input__label::before,
+    .radio .input__label::before {
+        background-color: var(--color-error-bg-field);
+        border-bottom: 1px solid var(--color-error);
+    }
+
+    .input__element:invalid + .error-message {
+        display: block;
+    }
+
+    .input__label {
+        color: var(--color-error);
+    }
+}
+
+.error-message {
+    display: none;
+    color: var(--color-error);
+    background-color: transparent;
+    font-family: var(--font-secondary);
+    font-size: var(--font-size-p-petit);
+    font-weight: 300;
+}
+
+/*
+   COURRIEL DANS LE FOOTER
+   ========================================================================== */
+
+.infolettre {
+    .form {
+        margin: 0;
+    }
+
+    .btn {
+        color: var(--color-white);
+        border: 1px solid var(--color-white) !important;
+    }
+}
+.ChampCourriel {
+    display: flex;
+    align-items: flex-end;
+    gap: 74px;
+}

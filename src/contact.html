@@ -1,0 +1,101 @@
+{% include '_partials/_header.html' %}
+
+<section class="formulaire">
+    <div class="wrapper">
+        <div class="titre_section">
+            <h1 id="projets">À bientôt?</h1>
+            <div class="ligne_etoile">
+                <div class="ligne"></div>
+                <div class="etoile">
+                    <div class="etoile_petite">
+                        <svg
+                            class="etoile"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="25"
+                            height="25"
+                            viewBox="0 0 27 27"
+                            fill="none"
+                        >
+                            <path
+                                d="M9.64407 11.0334C7.40678 12.7726 2.94915 13.3746 1 13.4582C3.31638 13.709 8.42373 14.6789 10.322 16.5518C12.2203 18.4247 13.3164 23.631 13.6271 26C13.8814 24.913 14.5593 17.7224 17.2712 15.8829C19.4407 14.4114 23.9944 13.6533 26 13.4582C20.9153 12.8729 18.2034 11.7023 17.2712 11.0334C15.273 9.59966 13.8814 3.87068 13.6271 1C13.2881 4.01003 12.4407 8.85953 9.64407 11.0334Z"
+                                fill="#5f7a69"
+                            />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+      
+        <form action="" class="form" autocomplete="off" data-component="Form">
+                <h2 data-scrolly="fromLeft">Bonjour,</h2>
+                <fieldset>
+                    <div class="champs_nom">
+                        <div class="input">
+                            <label class="input__label" for="first_name" data-scrolly="fromLeft"><h2>mon nom est</h2></label>
+                            <input
+                                class="input__element"
+                                type="text"
+                                name="full_name"
+                                id="full_name"
+                                placeholder="Entrez votre nom"
+                                required
+                                data-scrolly="fromLeft"
+                            />
+
+                            <label class="input__label" for="first_name" data-scrolly="fromLeft"><h2>,</h2></label>
+
+                            <span class="error-message">Ce champs est invalide</span>
+                        </div>
+                       
+                    </div>
+
+                
+                    <div class="champs_courriel">
+                        <div class="input">
+                            <label class="input__label" for="email" data-scrolly="fromLeft"><h2>voici mon courriel</h2></label>
+                            <input
+                                class="input__element"
+                                type="email"
+                                name="email"
+                                id="email"
+                                placeholder="Entrez votre courriel"
+                                required
+                                data-scrolly="fromLeft"
+                            />
+
+                            <label class="input__label" for="first_name" data-scrolly="fromLeft"><h2>&</h2></label>
+
+                            <span class="error-message">Ce champs est invalide</span>
+                        </div>
+
+                    </div>
+
+                    <div class="input textarea u-grid-fullwidth">
+                        <label class="input__label" for="comment" data-scrolly="fromLeft"><h2>laissez-moi un message</h2></label>
+                        <textarea
+                            maxlength="500"
+                            class="input__element"
+                            name="comment"
+                            id="comment"
+                            placeholder="Écrivez votre texte ici"
+                            required
+                            data-scrolly="fromBottom"
+                        ></textarea>
+                        <span class="error-message">Ce champs est invalide</span>
+                    </div>
+                </fieldset>
+            </div>
+
+            <footer class="form__footer">
+                <button class="btn soumettre" data-scrolly="fromLeft">Soumettre</button>
+            </footer>
+
+            <div class="form__confirmation">
+                <h5>Merci</h5>
+                <p>Votre formulaire a bien été envoyé.</p>
+            </div>
+        </form>
+    </div>
+</section>
+
+{% include '_partials/_footer.html' %}
